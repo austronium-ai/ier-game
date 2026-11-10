@@ -688,13 +688,14 @@ const QPOOL=[
 ];
 const QCLOSE={k:'close',need:1,t:()=>tt('ปิดบัญชีวันนี้','Close today’s ledger')};
 const QR={e:12,c:3,x:15};
+const NOSPEND_HOUR=18;
 const MONDROP=.20;
 const HAIRSW={"1": "#3e3452", "2": "#c3b9cb", "3": "#8a5040", "4": "#f5cf6a", "5": "#c43d42", "6": "#6f9bc6", "7": "#7fbf6a", "8": "#b880e8"};
 const SKINSW={"1": "#fac7a0", "2": "#f4a676", "3": "#d98c62", "4": "#b56e50", "5": "#8a5040"};
 
 /* ---------- state ---------- */
 /* save: one fixed key that every future patch reads; older saves are upgraded by migrateSave() */
-const GAMEVER='1.3',SAVEVER=2;
+const GAMEVER='1.3.1',SAVEVER=2;
 const KEY='ier-save',BAKKEY='ier-save-backup',OLDKEYS=['ier-v4'],V3KEY='ier-v3';
 let S=null,saveOK=true,CARRY=null;
 function migrateSave(s){
@@ -824,7 +825,7 @@ function closePrep(k){
     <div class="row"><button class="btn ghost" data-act="closeov">${tt('กลับไปจด','Go back')}</button><button class="btn" data-act="closeday" data-v="${k}">${ico('chest',18)} ${tt(`ปิดบัญชี เปิดหีบ${N(C.n)}`,`Close & open ${N(C.n)} chest`)}</button></div></div>`;
 }
 function confirmNoSpend(){
-  const t=today(),d=D();if(S.closes[t]||S.entries.some(e=>e.type==='out'&&e.date===t)||new Date().getHours()<20)return;
+  const t=today(),d=D();if(S.closes[t]||S.entries.some(e=>e.type==='out'&&e.date===t)||new Date().getHours()<NOSPEND_HOUR)return;
   const n=LOGMAX-d.slots;d.slots=LOGMAX;S.nospend[t]=true;
   if(n>0){gain(LOGE*n);save();startCards(n,()=>closeDay(t))}else{save();closeDay(t)}
 }
@@ -1127,7 +1128,7 @@ function vLedger(){
     <div class="cal">${cal}</div>
     ${canCloseYesterday()?`<button class="btn ghost" data-act="closeprep" data-v="${y}">${tt('ปิดบัญชีเมื่อวาน (ถึงเที่ยงวันนี้)','Close yesterday (until noon)')}</button>`:''}
     ${closedT?`<p class="okmsg">${tt('ปิดบัญชีวันนี้แล้ว','Today is closed')}${S.nospend[t]?tt(' · วันไม่จ่าย!',' · No-spend day!'):''}</p>`:`
-      ${!spentT?`<div class="stack" style="gap:6px;border:2px dashed var(--win-hl);padding:10px"><b>${tt('วันนี้ไม่ได้ใช้จ่ายเลย?','Spent nothing today?')}</b><p class="tiny muted">${tt(`ยืนยันได้หลัง 2 ทุ่ม ได้พลังเท่าจด ${LOGMAX} ครั้ง (${LOGMAX-d.slots} ครั้งที่เหลือ) + เปิดการ์ด และปิดบัญชีให้อัตโนมัติ`,`Confirm after 8 pm: energy and cards equal to ${LOGMAX} logs (${LOGMAX-d.slots} left), and the day closes automatically`)}</p><label class="chk"><input type="checkbox" id="nscheck" ${hr<20?'disabled':''}> ${tt('ยืนยันว่าวันนี้ไม่ได้ใช้จ่าย','I confirm I spent nothing today')}</label><button class="btn" data-act="nospend" id="nsbtn" disabled>${hr<20?tt('ยืนยันได้หลัง 20:00','Available after 20:00'):tt('ยืนยันวันไม่จ่าย','Confirm no-spend day')}</button></div>`:''}
+      ${!spentT?`<div class="stack" style="gap:6px;border:2px dashed var(--win-hl);padding:10px"><b>${tt('วันนี้ไม่ได้ใช้จ่ายเลย?','Spent nothing today?')}</b><p class="tiny muted">${tt(`ยืนยันได้หลัง ${NOSPEND_HOUR}:00 ได้พลังเท่าจด ${LOGMAX} ครั้ง (${LOGMAX-d.slots} ครั้งที่เหลือ) + เปิดการ์ด และปิดบัญชีให้อัตโนมัติ`,`Confirm after ${NOSPEND_HOUR}:00: energy and cards equal to ${LOGMAX} logs (${LOGMAX-d.slots} left), and the day closes automatically`)}</p><label class="chk"><input type="checkbox" id="nscheck" ${hr<NOSPEND_HOUR?'disabled':''}> ${tt('ยืนยันว่าวันนี้ไม่ได้ใช้จ่าย','I confirm I spent nothing today')}</label><button class="btn" data-act="nospend" id="nsbtn" disabled>${hr<NOSPEND_HOUR?tt(`ยืนยันได้หลัง ${NOSPEND_HOUR}:00`,`Available after ${NOSPEND_HOUR}:00`):tt('ยืนยันวันไม่จ่าย','Confirm no-spend day')}</button></div>`:''}
       <button class="btn big ${!spentT?'ghost':''}" data-act="closeprep" data-v="${t}">${ico('chest',20)} ${tt(`ปิดบัญชีวันนี้ · หีบ${N(CHEST[projChest(t)].n)}`,`Close today · ${N(CHEST[projChest(t)].n)} chest`)}</button>`}
   </section>
   <section class="win stack"><h2 class="wt">${tt('จดบัญชี','Log')}</h2><span class="wt r">${tt('รางวัล','Rewards')} ${Math.max(0,LOGMAX-d.slots)}/${LOGMAX}</span>
@@ -1288,7 +1289,7 @@ function openCodex(){
     <div><h3>${tt('แหล่งพลัง','Energy sources')}</h3><div class="tblwrap"><table>
       <tr><th>${tt('การกระทำ','Action')}</th><th>${tt('รางวัล','Reward')}</th><th>${tt('เพดาน','Limit')}</th></tr>
       <tr><td>${tt('จดรายการ','Log an entry')}</td><td class="e">+40</td><td>${tt('3 ครั้ง/วัน + การ์ด','3/day + a card')}</td></tr>
-      <tr><td>${tt('ยืนยันวันไม่จ่าย (หลัง 20:00)','No-spend day (after 8 pm)')}</td><td class="e">+40×3</td><td>${tt('ใช้ช่องเดียวกับการจด + การ์ด 3 ใบ','Shares the 3 log slots + 3 cards')}</td></tr>
+      <tr><td>${tt(`ยืนยันวันไม่จ่าย (หลัง ${NOSPEND_HOUR}:00)`,`No-spend day (after ${NOSPEND_HOUR}:00)`)}</td><td class="e">+40×3</td><td>${tt('ใช้ช่องเดียวกับการจด + การ์ด 3 ใบ','Shares the 3 log slots + 3 cards')}</td></tr>
       <tr><td>${tt('เควสประจำวัน','Daily quests')}</td><td class="e">+12</td><td>${tt('5 เควส · ครบได้ตั๋วจุ่ม 1 ใบ + เควสที่ 6 ได้ชุด/อาวุธ','5 quests · all done = 1 gacha ticket + quest 6 gear')}</td></tr>
       <tr><td>${tt('ปิดบัญชี','Daily close')}</td><td class="e">+15–30</td><td>${tt('หีบใหญ่ขึ้นตามสตรีค','Chest grows with streak')}</td></tr>
       <tr><td>${tt('ต้านกิเลส','Resist')}</td><td class="e">+10</td><td>${tt('2 ครั้ง/วัน','2/day')}</td></tr>
