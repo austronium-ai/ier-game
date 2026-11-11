@@ -229,8 +229,8 @@ p{margin:0}
 .duel{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:center}
 .shadowimg{filter:brightness(0) drop-shadow(0 0 2px var(--poison));opacity:.85}
 .nav{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--night-2);border-top:3px solid var(--frame);box-shadow:0 -3px 0 var(--ink);padding-bottom:env(safe-area-inset-bottom,0px)}
-.nav-in{max-width:520px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-.nav button{background:none;border:0;padding:8px 0 7px;display:flex;flex-direction:column;align-items:center;gap:3px;font-size:12px;font-weight:600;color:var(--muted);position:relative}
+.nav-in{max-width:520px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.nav button{background:none;border:0;padding:9px 0 8px;display:flex;flex-direction:column;align-items:center;gap:3px;font-size:12px;font-weight:600;color:var(--muted);position:relative}
 .nav button.on{color:var(--gold)}
 .nav button.on::before{content:"";position:absolute;top:-3px;left:22%;right:22%;height:4px;background:var(--gold)}
 .nav .dotn{position:absolute;top:5px;right:26%;width:8px;height:8px;background:var(--hp);border:2px solid var(--ink)}
@@ -315,6 +315,40 @@ textarea.field{font-family:var(--f-num);font-size:15px;line-height:1.2;min-heigh
 .ctl .btn{flex:1}
 .tog.on{background:var(--energy);box-shadow:inset -3px -3px 0 #3aa6c8,inset 3px 3px 0 #c8f6ff;color:var(--ink)}
 .hint{font-size:12px;color:var(--muted);text-align:center}
+.nav button.gs{border-left:2px solid var(--win-hl)}
+.hb2{display:flex;gap:4px}.hb2 .codexbtn{flex:1;min-width:30px}
+.ovx{position:fixed;top:calc(env(safe-area-inset-top,0px) + 10px);right:max(12px,env(safe-area-inset-right,0px));z-index:61;font:700 14px/1 var(--f-th);background:var(--ink);color:var(--gold);border:3px solid var(--gold);padding:9px 12px;box-shadow:3px 3px 0 var(--shade)}
+.ov{padding-top:calc(env(safe-area-inset-top,0px) + 58px)}
+.backbtn{border-color:var(--gold);color:var(--gold);font-weight:700}
+.btn.backbtn{width:100%}
+.btop{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}.btop .backbtn{width:auto}
+.enr img{filter:hue-rotate(-75deg) saturate(1.8) drop-shadow(0 0 3px #ff3355) drop-shadow(0 0 6px #ff335588)}
+.calh,.calg{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.calh span{text-align:center;font-size:11px;color:var(--dim);font-weight:600}
+.dc{background:var(--win-lo);border:2px solid var(--win-hl);display:flex;flex-direction:column;align-items:center;gap:1px;padding:3px 0 2px;min-width:0;color:var(--dim)}
+.dc b{font-family:var(--f-num);font-size:15px;line-height:1;color:var(--muted);font-weight:400}
+.dc small{font-family:var(--f-num);font-size:12.5px;line-height:1;color:var(--text);min-height:12px;white-space:nowrap}
+.dc small.ns{font-family:var(--f-th);font-size:9.5px;color:var(--exp)}
+.dc.ok{border-color:var(--gold);background:var(--win-hi)}.dc.ok b{color:var(--text)}
+.dc.sh{border-color:var(--energy)}
+.dc.td{outline:2px dashed var(--gold);outline-offset:1px}
+.dc.pre{opacity:.4}
+.dc.sel{background:var(--gold);border-color:var(--ink)}.dc.sel b,.dc.sel small{color:var(--ink)}
+.dc i.dot{display:block;width:6px;height:6px;margin:4px 0;background:var(--win-hl)}
+.tnext{background:var(--win-lo);border:3px solid var(--win-hl);padding:10px;display:flex;flex-direction:column;gap:10px}
+.tfoes{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.tfoes>div{display:flex;flex-direction:column;align-items:center;gap:2px;text-align:center;font-size:11.5px;min-width:0}
+.tgrid{display:grid;grid-template-columns:repeat(6,1fr);gap:4px}
+.tf{display:flex;align-items:center;justify-content:center;gap:2px;font-family:var(--f-num);font-size:16px;padding:4px 0;background:var(--win-lo);border:2px solid var(--win-hl);color:var(--dim)}
+.tf.ok{background:var(--win-hi);border-color:var(--exp);color:var(--exp)}
+.tf.nx{border-color:var(--gold);color:var(--gold);outline:2px dashed var(--gold);outline-offset:1px}
+.tf.ms{border-style:double;border-width:3px}
+.tnotes{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px}
+.salvbar{display:flex;flex-direction:column;gap:8px;border:2px dashed var(--hp);padding:8px}
+.salvbar .row .btn{flex:1}
+.item.pk{outline:3px solid var(--hp);outline-offset:-1px;background:#ff5c8622}
+.gbtns{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.gbtns .btn{padding:9px 4px;font-size:13.5px}
+@media (max-width:380px){.gbtns{grid-template-columns:1fr 1fr}.gbtns .btn:first-child{grid-column:1/3}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 
@@ -325,7 +359,7 @@ textarea.field{font-family:var(--f-num);font-size:15px;line-height:1.2;min-heigh
   <div class="hud-in">
     <div class="logo">I.E.R.<small>INNER ENEMY RAID</small><small class="sub">Income&amp;Expense Record</small></div>
     <div class="hud-stats" id="hud"></div>
-    <div class="hudbtns"><button class="codexbtn" data-act="lang" id="langbtn">EN</button><button class="codexbtn" data-act="codex" id="guidebtn">คู่มือ</button></div>
+    <div class="hudbtns"><div class="hb2"><button class="codexbtn" data-act="lang" id="langbtn">EN</button><button class="codexbtn" data-act="snd" id="sndbtn" aria-pressed="true">♪</button></div><button class="codexbtn" data-act="codex" id="guidebtn">คู่มือ</button></div>
   </div>
 </header>
 <main class="app" id="app"><div class="loading">LOADING…</div></main>
@@ -667,7 +701,15 @@ const upCost=up=>2+up*2;
 const GACHA={one:1,ten:10,pity:10};
 const CHEST=[{n:{th:'ไม้',en:'Wooden'},e:15,c:2,item:.2},{n:{th:'ทองแดง',en:'Bronze'},e:20,c:3,item:.35},{n:{th:'เงิน',en:'Silver'},e:25,c:5,item:.6},{n:{th:'ทองคำ',en:'Gold'},e:30,c:8,item:1}];
 const chestTier=st=>st>=14?3:st>=7?2:st>=3?1:0;
-const CARDT=[{w:35,k:'e',n:10},{w:25,k:'c',n:3},{w:12,k:'c',n:6},{w:10,k:'pot',n:1},{w:10,k:'chest',n:1},{w:6,k:'c',n:8},{w:2,k:'c',n:30,jack:true}];
+const CARDT=[{w:22,k:'e',n:20},{w:12,k:'e',n:40},{w:24,k:'c',n:5},{w:14,k:'c',n:10},{w:6,k:'c',n:20},{w:2,k:'c',n:50,jack:true},{w:16,k:'item'},{w:4,k:'item',rare:true}];
+const ENERGY_H=20,HOUR=3600000,GACHA_C=99,BAGMAX=40,POTION_C=10;
+const checkCrystals=st=>5+Math.min(st,15);
+/* tower: 30 floors, resets monthly; K = difficulty per floor, tuned by battle simulation */
+const TOWERK=[.9,.7,.68,.87,.87,.66,.95,.79,.74,.68,.82,.73,.75,.62,.67,.94,.86,.84,.85,.79,.87,.88,1.02,.9,1.04,.99,.99,1.69,1.75,1.75];
+const TOWERLINE=[['slime','slime','slime'],['slime','goblin'],['slime','slime','bat'],['bat','bat'],['bat','goblin'],['slime','goblin','imp'],['bat','imp'],['goblin','wraith'],['bat','imp','wraith'],['imp','wraith','zombie'],
+ ['wraith','zombie'],['imp','wraith','zombie'],['zombie','zombie'],['imp','wraith','troll'],['zombie','troll'],['wraith','troll'],['goblin','zombie','troll'],['troll','troll'],['zombie','king'],['wraith','troll','king'],
+ ['troll','king'],['zombie','troll','king'],['king','king'],['troll','king','troll'],['imp','king','king'],['troll','troll','king'],['king','troll','king'],['troll','king','king'],['slime','drake'],['drake']];
+const TOWERTOP=30,TOWER_HEAL=.25;
 const DUELCATS=['all','food','drink','grocery','shop','travel','fun','other'];
 const DUELR=[null,{n:{th:'ทองแดง',en:'Bronze'},e:15,c:4,item:0},{n:{th:'เงิน',en:'Silver'},e:25,c:6,item:.6},{n:{th:'ทองคำ',en:'Gold'},e:40,c:10,item:1}];
 const QPOOL=[
@@ -684,9 +726,10 @@ const QPOOL=[
   {k:'resist',need:1,t:()=>tt('ต้านกิเลส 1 ครั้ง','Resist one temptation')},
   {k:'up',need:1,t:()=>tt('ตีบวกไอเทม 1 ครั้ง','Upgrade an item once')},
   {k:'equip',need:1,t:()=>tt('เปลี่ยนชุดหรืออาวุธ 1 ครั้ง','Change any gear once')},
-  {k:'stats',need:1,t:()=>tt('เปิดดูหน้าสถิติ','Check the stats page')},
+  {k:'stats',need:1,t:()=>tt('เปิดดูหน้าเช็คบัญชี','Open the ledger check page')},
+  {k:'tower',need:1,t:()=>tt('เคลียหอคอย 1 ชั้น','Clear 1 tower floor')},
 ];
-const QCLOSE={k:'close',need:1,t:()=>tt('ปิดบัญชีวันนี้','Close today’s ledger')};
+const QCLOSE={k:'close',need:1,t:()=>tt('กด Daily Check วันนี้','Do today’s Daily Check')};
 const QR={e:12,c:3,x:15};
 const NOSPEND_HOUR=18;
 const MONDROP=.20;
@@ -695,17 +738,19 @@ const SKINSW={"1": "#fac7a0", "2": "#f4a676", "3": "#d98c62", "4": "#b56e50", "5
 
 /* ---------- state ---------- */
 /* save: one fixed key that every future patch reads; older saves are upgraded by migrateSave() */
-const GAMEVER='1.3.2',SAVEVER=2;
+const GAMEVER='1.4',SAVEVER=3;
 const KEY='ier-save',BAKKEY='ier-save-backup',OLDKEYS=['ier-v4'],V3KEY='ier-v3';
 let S=null,saveOK=true,CARRY=null;
 function migrateSave(s){
   if(!s||s.v!==4)return null;
   s.ver=s.ver||1;
   if(s.ver<2){if(!s.eye)s.eye='#7fbf6a';s.ver=2}
-  /* future patches: add `if(s.ver<3){…;s.ver=3}` here */
+  if(s.ver<3){s.eAt=Date.now();s.sbox=s.sbox||0;if(s.sound==null)s.sound=true;s.ver=3}
+  /* future patches: add `if(s.ver<4){…;s.ver=4}` here */
   const need={daily:{},closes:{},nospend:{},shieldUsed:{},resists:[],rage:{},recon:[],reviews:{},proph:{},titles:[],inv:[],dex:{},kills:{},entries:[],budget:{},stats:{str:1,agi:1,int:1,vit:1},skills:{},eq:{weapon:null,head:null,body:null,arms:null,legs:null}};
   for(const k in need)if(s[k]==null)s[k]=need[k];
-  for(const k of['tickets','chests','potions','crystals','pts','sp','pity','shields','energy','exp'])if(typeof s[k]!=='number')s[k]=0;
+  for(const k of['tickets','chests','potions','crystals','pts','sp','pity','shields','energy','exp','sbox'])if(typeof s[k]!=='number')s[k]=0;
+  if(typeof s.eAt!=='number')s.eAt=Date.now();if(!s.tower||typeof s.tower!=='object')s.tower={m:'',best:0};
   return s;
 }
 function load(){try{
@@ -726,28 +771,28 @@ async function downloadSave(){
   S.lastExport=Date.now();save();toast(tt(`บันทึกไฟล์เซฟแล้ว: ${name}`,`Save file downloaded: ${name}`),'gold');
 }
 S=load();if(S&&S.lang)LANG=S.lang;else if(CARRY&&CARRY.lang)LANG=CARRY.lang;
-const ui={view:'ledger',type:'out',cat:{out:'food',in:'salary'},amt:'',note:'',back:false,rItem:'',rAmt:'',rCat:'shop',stats:'month',reconMsg:'',bagF:'all',dexF:'all',budgetEdit:false,delArm:false,impArm:false,deck:null,cq:null,duelCat:'all',duelAmt:'',resetArm:false};
+const ui={view:'log',heroTab:'info',huntTab:'normal',calOpen:false,calM:null,calSel:null,salv:null,type:'out',cat:{out:'food',in:'salary'},amt:'',note:'',back:false,rItem:'',rAmt:'',rCat:'shop',stats:'month',reconMsg:'',bagF:'all',dexF:'all',budgetEdit:false,delArm:false,impArm:false,deck:null,cq:null,duelCat:'all',duelAmt:'',resetArm:false};
 const cr={name:CARRY?CARRY.name:'',cls:'greatsword',hair:1,hc:1,skin:2,eye:EYE0,arm:false};
 const EYESW=['#7fbf6a','#4ab0f0','#8a5a3a','#d0383c','#b880e8','#f2c14e','#9aa6c8','#2b2340'];
 
 function genQuests(){let h=0;for(const ch of today()+S.created+S.name)h=(h*31+ch.charCodeAt(0))|0;const r=mulberry32(h);const pool=QPOOL.slice();const out=[{k:'close',need:1}];
-  while(out.length<5&&pool.length){const q=pool.splice(Math.floor(r()*pool.length),1)[0];if((q.k==='note'&&out.some(x=>x.k==='cards'))||(q.k==='cards'&&out.some(x=>x.k==='note')))continue;const o={k:q.k,need:q.need};if(q.k==='mon'){const ms=MONS.filter(m=>!m.boss&&m.lv<=S.lv+1);o.p=ms[Math.floor(r()*ms.length)].id}out.push(o)}
+  while(out.length<5&&pool.length){const q=pool.splice(Math.floor(r()*pool.length),1)[0];if(q.k==='tower'&&towerState().best>=Math.min(TOWERTOP,S.lv*3))continue;if((q.k==='note'&&out.some(x=>x.k==='cards'))||(q.k==='cards'&&out.some(x=>x.k==='note')))continue;const o={k:q.k,need:q.need};if(q.k==='mon'){const ms=MONS.filter(m=>!m.boss&&m.lv<=S.lv+1);o.p=ms[Math.floor(r()*ms.length)].id}out.push(o)}
   return out}
 function D(){const t=today();let d=S.daily[t];if(!d)d=S.daily[t]={logs:0,slots:0,resist:0,won:0};if(!d.c)d.c={cards:0,note:0,win:0,mon:{},skill:0,crit:0,step:0,manual:0,hp50:0,chain:0,run:0,resist:0,up:0,pull:0,equip:0,stats:0};if(!d.q){d.q=genQuests();d.qc=[false,false,false,false,false];d.bonus=false}if(d.slots==null)d.slots=Math.min(LOGMAX,d.logs||0);return d}
 function bump(k,n=1){if(!S)return;const c=D().c;c[k]=(c[k]||0)+n}
 function qProg(q){const c=D().c;if(q.k==='close')return S.closes[today()]?1:0;if(q.k==='mon')return c.mon[q.p]||0;return c[q.k]||0}
 function qText(q){return(q.k==='close'?QCLOSE:QPOOL.find(x=>x.k===q.k)).t(q)}
 function streakAt(k){let n=0;while(S.closes[k]||S.shieldUsed[k]){n++;k=addDays(k,-1)}return n}
-function canCloseYesterday(){const y=addDays(today(),-1);return new Date().getHours()<12&&!S.closes[y]&&y>=S.created}
-function streak(){const t=today(),y=addDays(t,-1);if(S.closes[t])return streakAt(t);const sy=streakAt(y);if(sy)return sy;if(canCloseYesterday())return streakAt(addDays(t,-2));return 0}
+function streak(){const t=today();return S.closes[t]?streakAt(t):streakAt(addDays(t,-1))}
 function settle(){
-  const t=today();const cutoff=new Date().getHours()<12?addDays(t,-2):addDays(t,-1);
+  const t=today();const cutoff=addDays(t,-1);
   if(!S.settled||S.settled>=cutoff)return;
   let d=addDays(S.settled,1);const used=[];
   while(d<=cutoff){if(d>=S.created&&!S.closes[d]&&!S.shieldUsed[d]&&S.shields>0&&streakAt(addDays(d,-1))>0){S.shields--;S.shieldUsed[d]=true;used.push(d)}d=addDays(d,1)}
   S.settled=cutoff;save();
   if(used.length)setTimeout(()=>toast(`${ico('shield',16)} ${tt(`โล่กันสตรีคทำงาน ${used.length} วัน`,`Streak shield used for ${used.length} day(s)`)}`,'gold'),400);
 }
+function towerState(){const m=today().slice(0,7);if(!S.tower||S.tower.m!==m)S.tower={m,best:0};return S.tower}
 function settleMonth(){
   const cm=today().slice(0,7);if(S.monthSettled===cm)return;const pm=S.monthSettled;
   const X=sumRange(pm+'-01',pm+'-31');const passes=S.recon.filter(r=>r.ok&&r.date.slice(0,7)===pm).length;
@@ -761,15 +806,19 @@ function heroDef(swap){let gear=equipped();if(swap)gear=gear.filter(i=>i.slot!==
 const curStats=()=>computeStats(heroDef());
 function hasAura(){return equipped().some(i=>i.rar>=4||i.up>=10)}
 const dexKey=it=>it.slot==='weapon'?`w_${it.cls}_${it.lv}${it.sty}`:`a_${it.lv}${it.sty}_${it.slot}`;
-function addItem(it){S.inv.push(it);S.dex[dexKey(it)]=true;return it}
+const salvVal=it=>(it.rar+1)*3+it.up*2+Math.floor(it.lv/2);
+function addItem(it){if(S.inv.length>=BAGMAX){it.salv=salvVal(it);S.crystals+=it.salv;return it}S.inv.push(it);S.dex[dexKey(it)]=true;return it}
 function rollRarity(min=0,max=4){const pool=RARITY.map((x,i)=>i).filter(i=>i>=min&&i<=max);let tot=pool.reduce((a,i)=>a+RARITY[i].p,0),r=Math.random()*tot;for(const i of pool){if((r-=RARITY[i].p)<0)return i}return pool[pool.length-1]}
 function rollLv(ref){const cap=Math.max(2,Math.min(10,ref%2?ref+1:ref));const opts=ARMOR_LVS.filter(l=>l<=cap);const r=Math.random();if(r<.55||opts.length===1)return opts[opts.length-1];if(r<.85||opts.length===2)return opts[opts.length-2];return pick(opts.slice(0,-2))}
 function makeItem(slot,lv,sty,rar){const it={id:S.iid++,slot,lv,sty,rar,up:0,bonus:[]};if(slot==='weapon')it.cls=S.cls;const t=lv/2,mx=1+Math.ceil(t/2);for(let i=0;i<RARITY[rar].lines;i++){const k=pick(STATK),v=rnd(1,mx);const ex=it.bonus.find(b=>b.k===k);if(ex)ex.v+=v;else it.bonus.push({k,v})}return it}
 function rollItem({ref,minRar=0,maxRar=4,slots,lv}={}){const slot=pick(slots||SLOTK);return addItem(makeItem(slot,lv||rollLv(ref??S.lv),pick(['a','b']),rollRarity(minRar,maxRar)))}
 const rarColor=r=>RARITY[r].v;
-const itemLine=it=>`${itemIcon(it,28)} <b style="color:${rarColor(it.rar)}">${esc(itemName(it))}</b> <span class="muted tiny">(${N(RARITY[it.rar].n)} · Lv${it.lv})</span>`;
+const itemLine=it=>`${itemIcon(it,28)} <b style="color:${rarColor(it.rar)}">${esc(itemName(it))}</b> <span class="muted tiny">(${N(RARITY[it.rar].n)} · Lv${it.lv})</span>${it.salv?` <span class="tiny badmsg">${tt(`กระเป๋าเต็ม → ผลึก +${it.salv}`,`Bag full → +${it.salv} crystals`)}</span>`:''}`;
 function power(it){const s=itemStats(it);const w={atk:3,def:3,hp:.5,mp:.4,spd:2,crit:2,cdmg:1,str:4,agi:4,int:4,vit:4};let p=0;for(const k in s)p+=(w[k]||1)*s[k];return p}
 const canWear=it=>S.lv>=reqLv(it.lv)&&(it.slot!=='weapon'||it.cls===S.cls);
+function tickE(){if(!S)return;const now=Date.now();if(S.energy>=MAXE){S.eAt=now;return}const n=Math.floor((now-S.eAt)/HOUR);if(n>0){S.energy=Math.min(MAXE,S.energy+n*ENERGY_H);S.eAt+=n*HOUR;if(S.energy>=MAXE)S.eAt=now}}
+const eNext=()=>S.energy>=MAXE?0:HOUR-(Date.now()-S.eAt)%HOUR;
+function spendE(n){tickE();if(S.energy>=MAXE)S.eAt=Date.now();S.energy-=n}
 function gain(n){if(n<=0)return;let tot=S.energy+n;if(tot>MAXE){S.overflow=(S.overflow||0)+tot-MAXE;const c=Math.floor(S.overflow/20);if(c){S.crystals+=c;S.overflow-=c*20;toast(`${ico('crystal',16)} ${tt(`พลังล้นถัง แปลงเป็นผลึก +${c}`,`Energy overflow → +${c} crystals`)}`,'gold')}tot=MAXE}S.energy=tot}
 function addExp(n){if(S.lv>=LVCAP){S.expBank=(S.expBank||0)+n;const c=Math.floor(S.expBank/40);if(c){S.crystals+=c;S.expBank-=c*40}return 0}S.exp+=n;let ups=0;while(S.lv<LVCAP&&S.exp>=NEED[S.lv]){S.exp-=NEED[S.lv];S.lv++;S.sp++;S.pts+=PTS_PER_LV;ups++}if(S.lv>=LVCAP)S.exp=0;if(ups)setHP(curStats().maxhp);return ups}
 const lvLine=ups=>`<b class="okmsg">${tt(`เลเวลอัป! Lv ${S.lv} · แต้มสเตตัส +${ups*PTS_PER_LV} · SP +${ups} · เลือดเต็ม`,`Level up! Lv ${S.lv} · +${ups*PTS_PER_LV} stat points · +${ups} SP · HP restored`)}</b>`;
@@ -780,7 +829,7 @@ function featuredCat(){const t=today();for(const k of[t,addDays(t,-1)]){const by
 function setHP(v){S.hp=Math.max(0,Math.round(v));S.hpAt=Date.now()}
 function hpState(){const st=curStats(),mx=st.maxhp,amt=Math.max(1,Math.ceil(mx*st.hpRate));if(S.hp==null||S.hp>=mx)return{hp:mx,mx,next:0,full:0,amt};const el=Date.now()-S.hpAt,ticks=Math.floor(el/TICK_MS);const hp=Math.min(mx,S.hp+ticks*amt);if(hp>=mx)return{hp:mx,mx,next:0,full:0,amt};const next=TICK_MS-el%TICK_MS;const left=Math.ceil((mx-hp)/amt);return{hp,mx,next,full:next+(left-1)*TICK_MS,amt}}
 function hpInfo(){const h=hpState();return h.hp>=h.mx?`<span class="okmsg">${tt('เลือดเต็ม','Full HP')}</span>`:`${tt(`+${h.amt} HP ใน`,`+${h.amt} HP in`)} <b class="num">${fmtT(h.next)}</b> · ${tt('เต็มใน','full in')} ${fmtT(h.full)}`}
-function drinkPotion(){if(S.potions<1)return;const h=hpState();if(h.hp>=h.mx){toast(tt('เลือดเต็มอยู่แล้ว','HP is already full'));return}S.potions--;setHP(Math.min(h.mx,h.hp+h.mx*.5));save();render();toast(`${ico('potion',16)} ${tt('ฟื้น HP 50%','Restored 50% HP')}`,'gold')}
+function drinkPotion(){if(S.potions<1)return;const h=hpState();if(h.hp>=h.mx){toast(tt('เลือดเต็มอยู่แล้ว','HP is already full'));return}S.potions--;setHP(Math.min(h.mx,h.hp+h.mx*.5));sfx('heal');save();render();toast(`${ico('potion',16)} ${tt('ฟื้น HP 50%','Restored 50% HP')}`,'gold')}
 
 /* ---------- actions: ledger ---------- */
 function addEntry(){
@@ -790,84 +839,78 @@ function addEntry(){
   S.entries.push({id:S.nid++,type:ui.type,cat:ui.cat[ui.type],amt:Math.round(amt*100)/100,note,date,logged:t});
   if(ui.type==='out'&&S.nospend[date]){delete S.nospend[date];toast(tt('ลบตราวันไม่จ่ายของวันนั้นออกแล้ว','Removed that day’s no-spend stamp'))}
   if(note)bump('note');d.logs++;ui.amt='';ui.note='';
-  if(d.slots<LOGMAX){d.slots++;gain(LOGE);save();startCards(1)}else{save();render();toast(tt('บันทึกแล้ว · วันนี้รับรางวัลการจดครบ 3 ครั้งแล้ว','Saved · today’s 3 log rewards are used'))}
+  sfx('coin');
+  if(d.slots<LOGMAX){d.slots++;save();startCards(1)}else{save();render();toast(tt('บันทึกแล้ว · วันนี้เปิดการ์ดครบ 3 ครั้งแล้ว','Saved · today’s 3 card draws are used'))}
 }
 function drawCard(){let r=Math.random()*100;for(const c of CARDT){if((r-=c.w)<0)return c}return CARDT[0]}
-function cardFace(c){if(c.k==='e')return `${ico('bolt',30)}<span>${tt('พลัง','Energy')} +${c.n}</span>`;if(c.k==='c')return `${ico('crystal',30)}<span>${c.jack?tt('แจ็กพอต! ','Jackpot! '):''}${tt('ผลึก','Crystals')} +${c.n}</span>`;if(c.k==='chest')return `${ico('chest',30)}<span>${tt('หีบสมบัติ','Chest')} +1</span>`;if(c.k==='pot')return `${ico('potion',30)}<span>${tt('ยาฟื้นฟู','Potion')} +1</span>`;return `${ico('ticket',30)}<span>${tt('ตั๋วจุ่ม','Gacha ticket')} +1</span>`}
+function cardFace(c){if(c.k==='e')return `${ico('bolt',30)}<span>${tt('พลัง','Energy')} +${c.n}</span>`;if(c.k==='c')return `${ico('crystal',30)}<span>${c.jack?tt('แจ็กพอต! ','Jackpot! '):''}${tt('ผลึก','Crystals')} +${c.n}</span>`;if(c.k==='item'&&c.it)return `${itemIcon(c.it,40)}<span style="color:${rarColor(c.it.rar)}">${N(RARITY[c.it.rar].n)}</span>`;return `${ico('shirt',30)}<span>${c.rare?tt('ไอเทม Advance+','Advance+ item'):tt('ไอเทมสุ่ม','Random item')}</span>`}
 function startCards(n,after){ui.cq={left:n,total:n,after};nextDeck();render()}
 function nextDeck(){ui.deck=[drawCard(),drawCard(),drawCard()];ui.picked=null;showCards()}
 function showCards(){
   const ov=$('#ov');ov.hidden=false;const d=ui.deck,pk=ui.picked,q=ui.cq;const idx=q.total-q.left+(pk==null?1:0);
-  ov.innerHTML=`<div class="win stack" role="dialog" aria-label="${tt('การ์ดบันทึก','Log card')}"><h2 class="wt">${tt('การ์ดบันทึก','Log card')}</h2><span class="wt r">${q.total>1?`${idx}/${q.total}`:`${D().slots}/${LOGMAX} ${tt('วันนี้','today')}`}</span>
-    <p>${tt(`ได้พลัง +${LOGE} แล้ว`,`+${LOGE} energy received`)}${pk==null?tt(' · เลือกการ์ด 1 ใบ',' · pick a card'):''}</p>
+  ov.innerHTML=`<div class="win stack" role="dialog" data-noclose aria-label="${tt('การ์ดบันทึก','Log card')}"><h2 class="wt">${tt('การ์ดบันทึก','Log card')}</h2><span class="wt r">${q.total>1?`${idx}/${q.total}`:`${D().slots}/${LOGMAX} ${tt('วันนี้','today')}`}</span>
+    <p>${pk==null?tt('เลือกการ์ด 1 ใบ ลุ้นผลึก ไอเทม หรือพลัง','Pick a card: crystals, an item or energy'):d[pk].k==='item'&&d[pk].it?itemLine(d[pk].it):tt('ได้แล้ว!','Got it!')}</p>
     <div class="cards">${d.map((c,i)=>pk==null?`<button class="card" data-act="pick" data-v="${i}" aria-label="card ${i+1}"><span class="q">?</span></button>`:`<div class="card rev ${i===pk?'pick':'dim'}">${cardFace(c)}</div>`).join('')}</div>
-    ${pk==null?`<p class="tiny muted">${tt('รับรางวัลการจดได้วันละ 3 ครั้ง ยอดเงินมากหรือน้อยไม่มีผล','3 log rewards per day; the amount never matters')}</p>`:`<button class="btn" data-act="cardnext">${q.left>0?tt(`การ์ดถัดไป (เหลือ ${q.left})`,`Next card (${q.left} left)`):tt('เก็บรางวัล','Collect')}</button>`}</div>`;
+    ${pk==null?`<p class="tiny muted">${tt('เปิดการ์ดได้วันละ 3 ครั้ง (จดบัญชีหรือยืนยันวันไม่จ่าย) ยอดเงินมากหรือน้อยไม่มีผล','Up to 3 card draws per day (logs or a no-spend day); amounts never matter')}</p>`:`<button class="btn" data-act="cardnext">${q.left>0?tt(`การ์ดถัดไป (เหลือ ${q.left})`,`Next card (${q.left} left)`):tt('เก็บรางวัล','Collect')}</button>`}</div>`;
 }
 function pickCard(i){if(ui.picked!=null)return;ui.picked=i;ui.cq.left--;const c=ui.deck[i];
-  if(c.k==='e')gain(c.n);else if(c.k==='c')S.crystals+=c.n;else if(c.k==='chest')S.chests++;else if(c.k==='pot')S.potions++;else S.tickets++;
-  bump('cards');save();showCards();hud()}
+  if(c.k==='e')gain(c.n);else if(c.k==='c')S.crystals+=c.n;else if(c.k==='item')c.it=rollItem(c.rare?{minRar:1}:{maxRar:2});
+  sfx(c.jack||(c.it&&c.it.rar>=2)?'rare':'card');bump('cards');save();showCards();hud()}
 function cardNext(){const q=ui.cq;if(q&&q.left>0){nextDeck();return}const after=q&&q.after;ui.cq=null;closeOv();if(after)after()}
 function doResist(){
   const amt=parseFloat(String(ui.rAmt).replace(/,/g,''));const item=ui.rItem.trim();
   if(!item||!(amt>0)){toast(tt('บอกหน่อยว่าอยากซื้ออะไร ราคาเท่าไหร่','Say what you wanted and its price'),'bad');return}
   const d=D();S.resists.push({item,amt,cat:ui.rCat,date:today()});d.resist++;S.rage[ui.rCat]=(S.rage[ui.rCat]||0)+1;bump('resist');
-  let msg=tt(`แต้มแค้น${catN(ui.rCat)} +1`,`${catN(ui.rCat)} grudge +1`);if(d.resist<=2){gain(10);msg=tt('พลัง +10 · ','Energy +10 · ')+msg}
+  let msg=tt(`แต้มแค้น${catN(ui.rCat)} +1`,`${catN(ui.rCat)} grudge +1`);sfx('coin');if(d.resist<=2){gain(10);msg=tt('พลัง +10 · ','Energy +10 · ')+msg}
   toast(`${ico('shield',16)} ${msg}`,'gold');ui.rItem='';ui.rAmt='';save();render();
 }
-function projChest(k){return chestTier((S.closes[addDays(k,-1)]||S.shieldUsed[addDays(k,-1)])?streakAt(addDays(k,-1))+1:1)}
-function closePrep(k){
-  const ents=S.entries.filter(e=>e.date===k);const outs=ents.filter(e=>e.type==='out');const spent=outs.reduce((a,e)=>a+e.amt,0);const C=CHEST[projChest(k)];
-  const ov=$('#ov');ov.hidden=false;
-  ov.innerHTML=`<div class="win stack" role="dialog"><h2 class="wt">${k===today()?tt('ปิดบัญชีวันนี้','Close today'):tt('ปิดบัญชีเมื่อวาน','Close yesterday')}</h2>
-    <div class="spread"><span>${tt('รายการ','Entries')}</span><b class="num">${ents.length}</b></div>
-    <div class="spread"><span>${tt('รายจ่ายรวม','Total spent')}</span><b class="num">${baht(spent)}</b></div>
-    <p class="tiny muted">${tt('ยืนยันว่าจดครบแล้ว ถ้ายังตกหล่น กลับไปจดก่อนได้','Confirm everything is logged. Missing something? Go back first.')}</p>
-    <div class="row"><button class="btn ghost" data-act="closeov">${tt('กลับไปจด','Go back')}</button><button class="btn" data-act="closeday" data-v="${k}">${ico('chest',18)} ${tt(`ปิดบัญชี เปิดหีบ${N(C.n)}`,`Close & open ${N(C.n)} chest`)}</button></div></div>`;
-}
 function confirmNoSpend(){
-  const t=today(),d=D();if(S.closes[t]||S.entries.some(e=>e.type==='out'&&e.date===t)||new Date().getHours()<NOSPEND_HOUR)return;
-  const n=LOGMAX-d.slots;d.slots=LOGMAX;S.nospend[t]=true;
-  if(n>0){gain(LOGE*n);save();startCards(n,()=>closeDay(t))}else{save();closeDay(t)}
+  const t=today(),d=D();if(S.nospend[t]||S.entries.some(e=>e.type==='out'&&e.date===t)||new Date().getHours()<NOSPEND_HOUR)return;
+  const n=LOGMAX-d.slots;d.slots=LOGMAX;S.nospend[t]=true;save();sfx('coin');
+  if(n>0)startCards(n,()=>toast(tt('บันทึกวันไม่จ่ายแล้ว','No-spend day stamped'),'gold'));else{render();toast(tt('บันทึกวันไม่จ่ายแล้ว · วันนี้เปิดการ์ดครบ 3 ครั้งแล้ว','No-spend day stamped · all 3 draws already used today'),'gold')}
 }
-function closeDay(k){
-  if(S.closes[k])return;S.closes[k]=true;
-  if(!S.entries.some(e=>e.type==='out'&&e.date===k))S.nospend[k]=true;
-  const st=streakAt(k);S.best=Math.max(S.best||0,st);
-  const lines=[];if(st>0&&st%7===0&&S.shields<2){S.shields++;lines.push(`${ico('shield',16)} ${tt(`ได้โล่กันสตรีค (${S.shields}/2)`,`Streak shield earned (${S.shields}/2)`)}`)}
-  const C=CHEST[chestTier(st)];gain(C.e);S.crystals+=C.c;const ups=addExp(20);
-  lines.unshift(`${ico('bolt',16)} ${tt('พลัง','Energy')} +${C.e}`,`${ico('crystal',16)} ${tt('ผลึก','Crystals')} +${C.c}`,'EXP +20');
-  if(Math.random()<C.item)lines.push(itemLine(rollItem()));
+function dailyCheck(){
+  const k=today();if(S.closes[k])return;S.closes[k]=true;
+  const st=streakAt(k);S.best=Math.max(S.best||0,st);const lines=[];
+  if(st>0&&st%7===0&&S.shields<2){S.shields++;lines.push(`${ico('shield',16)} ${tt(`ได้โล่กันสตรีค (${S.shields}/2)`,`Streak shield earned (${S.shields}/2)`)}`)}
+  tickE();const e0=S.energy;if(S.energy<MAXE){S.energy=MAXE;S.eAt=Date.now()}const cr=checkCrystals(st);S.crystals+=cr;const ups=addExp(20);
+  lines.unshift(`${ico('bolt',16)} ${tt('พลังเต็มหลอด','Energy full')} (+${MAXE-Math.min(e0,MAXE)})`,`${ico('crystal',16)} ${tt('ผลึก','Crystals')} +${cr} ${tt(`(สตรีค ${st} วัน)`,`(${st}-day streak)`)}`,'EXP +20');
   if(ups)lines.push(lvLine(ups));
-  save();reveal(tt(`หีบ${N(C.n)}`,`${N(C.n)} chest`),tt(`สตรีค ${st} วัน`,`${st}-day streak`)+(S.nospend[k]?tt(' · วันไม่จ่าย!',' · No-spend day!'):''),lines);
+  sfx('level');save();reveal('Daily Check',tt(`สตรีค ${st} วัน`,`${st}-day streak`),lines);
 }
 function reveal(title,sub,lines){const ov=$('#ov');ov.hidden=false;ov.innerHTML=`<div class="win stack result" role="dialog"><h2 class="wt">${esc(title)}</h2><h3>${sub}</h3><div class="loot">${lines.map(l=>`<div>${l}</div>`).join('')}</div><button class="btn" data-act="closeov">${tt('ตกลง','OK')}</button></div>`;render()}
 function claimQuest(i){const d=D();if(d.qc[i])return;const q=d.q[i];if(qProg(q)<q.need)return;d.qc[i]=true;gain(QR.e);S.crystals+=QR.c;const ups=addExp(QR.x);
   let tk='';if(d.qc.every(Boolean)&&!d.ticket){d.ticket=true;S.tickets++;tk=` · ${ico('ticket',14)} ${tt('ครบ 5 เควส ได้ตั๋วจุ่ม +1','All 5 done: +1 gacha ticket')}`}
-  toast(`${tt('เควสสำเร็จ','Quest done')} · ${ico('bolt',14)}+${QR.e} ${ico('crystal',14)}+${QR.c} EXP+${QR.x}${ups?` · Lv ${S.lv}!`:''}${tk}`,'gold');save();render()}
+  sfx(ups?'level':'coin');toast(`${tt('ภารกิจสำเร็จ','Quest done')} · ${ico('bolt',14)}+${QR.e} ${ico('crystal',14)}+${QR.c} EXP+${QR.x}${ups?` · Lv ${S.lv}!`:''}${tk}`,'gold');save();render()}
 function claimBonus(){const d=D();if(d.bonus||!d.qc.every(Boolean))return;d.bonus=true;const it=rollItem({minRar:1,slots:['weapon','body','head','arms','legs']});const ups=addExp(30);save();reveal(tt('เควสพิเศษ','Bonus quest'),tt('ครบ 5 เควส ได้ของสุ่ม!','All 5 done, random gear!'),[itemLine(it),'EXP +30',...(ups?[lvLine(ups)]:[])])}
 
 /* ---------- actions: items ---------- */
 function openChest(){if(S.chests<1)return;S.chests--;const c=2+Math.floor(Math.random()*4);S.crystals+=c;const lines=[`${ico('crystal',16)} ${tt('ผลึก','Crystals')} +${c}`];if(Math.random()<.5)lines.push(itemLine(rollItem()));save();reveal(tt('หีบสมบัติ','Treasure chest'),tt('เปิดหีบ','Opened'),lines)}
-function pull(n){
-  const cost=n===10?GACHA.ten:GACHA.one;
-  if(S.tickets<cost){toast(tt(`ตั๋วไม่พอ ต้องใช้ ${cost} ใบ ได้ตั๋วจากการทำเควสประจำวันครบ 5 เควส`,`Need ${cost} ticket(s). Earn them by finishing all 5 daily quests`),'bad');return}
-  S.tickets-=cost;const got=[];
+function pull(n,by){
+  const useC=by==='c',cost=useC?GACHA_C*n:(n===10?GACHA.ten:GACHA.one);
+  if(useC?S.crystals<cost:S.tickets<cost){sfx('bad');toast(useC?tt(`ผลึกไม่พอ ต้องใช้ ${cost}`,`Need ${cost} crystals`):tt(`ตั๋วไม่พอ ต้องใช้ ${cost} ใบ`,`Need ${cost} ticket(s)`),'bad');return}
+  if(useC)S.crystals-=cost;else S.tickets-=cost;const got=[];
   for(let i=0;i<n;i++){S.pity++;const min=S.pity>=GACHA.pity?2:0;const it=rollItem({minRar:min});if(it.rar>=2)S.pity=0;got.push(it)}
-  bump('pull',n);save();const best=Math.max(...got.map(i=>i.rar));const ov=$('#ov');ov.hidden=false;
-  ov.innerHTML=`<div class="win stack result" role="dialog"><h2 class="wt">${tt('กล่องจุ่ม','Gacha')}</h2>
-    <h3 style="color:${rarColor(best)}">${best>=4?'LEGENDARY!':best>=3?'ARTIFACT!':best>=2?'SPECIAL!':tt(`ได้ของ ${n} ชิ้น`,`${n} item(s)`)}</h3>
-    <div class="items ${n===10?'gres':''}">${got.map((it,i)=>`<button class="item pop" style="animation-delay:${RM?0:i*90}ms" data-act="item" data-id="${it.id}">${itemIcon(it,64)}</button>`).join('')}</div>
-    <div class="loot tiny">${got.filter(i=>i.rar>=1).map(it=>`<div>${itemLine(it)}</div>`).join('')||`<span class="muted">${tt('ได้แต่ Normal แยกเป็นผลึกได้','Only Normals; you can salvage them')}</span>`}</div>
-    <p class="tiny muted">${tt(`การันตี Special ขึ้นไปในอีก ${GACHA.pity-S.pity} ครั้ง`,`Special+ guaranteed in ${GACHA.pity-S.pity}`)} · ${tt('ตั๋วเหลือ','Tickets left')} ${S.tickets}</p>
-    <div class="row"><button class="btn ghost" data-act="closeov">${tt('เก็บเข้ากระเป๋า','Keep')}</button><button class="btn" data-act="pull" data-v="${n}" ${S.tickets>=cost?'':'disabled'}>${tt('จุ่มอีก','Pull again')}</button></div></div>`;
+  bump('pull',n);save();showLoot(tt('กล่องจุ่ม','Gacha'),got,`<p class="tiny muted">${tt(`การันตี Special ขึ้นไปในอีก ${GACHA.pity-S.pity} ครั้ง`,`Special+ guaranteed in ${GACHA.pity-S.pity}`)} · ${ico('ticket',14)} ${S.tickets} · ${ico('crystal',14)} ${S.crystals}</p>`,`<button class="btn" data-act="pull" data-v="${n}" data-by="${useC?'c':'t'}" ${(useC?S.crystals>=cost:S.tickets>=cost)?'':'disabled'}>${tt('จุ่มอีก','Pull again')} · ${useC?ico('crystal',16)+cost:ico('ticket',16)+cost}</button>`);
+}
+function showLoot(title,got,extra='',again=''){
+  const best=Math.max(...got.map(i=>i.rar));sfx(best>=2?'rare':'card');const ov=$('#ov');ov.hidden=false;
+  ov.innerHTML=`<div class="win stack result" role="dialog"><h2 class="wt">${title}</h2>
+    <h3 style="color:${rarColor(best)}">${best>=4?'LEGENDARY!':best>=3?'ARTIFACT!':best>=2?'SPECIAL!':tt(`ได้ของ ${got.length} ชิ้น`,`${got.length} item(s)`)}</h3>
+    <div class="items ${got.length>=10?'gres':''}">${got.map((it,i)=>`<button class="item pop" style="animation-delay:${RM?0:i*90}ms" ${it.salv?'disabled':`data-act="item" data-id="${it.id}"`}>${itemIcon(it,64)}</button>`).join('')}</div>
+    <div class="loot tiny">${got.filter(i=>i.rar>=1||i.salv).map(it=>`<div>${itemLine(it)}</div>`).join('')||`<span class="muted">${tt('ได้แต่ Normal แยกเป็นผลึกได้','Only Normals; you can dismantle them')}</span>`}</div>
+    ${extra}<div class="row"><button class="btn ghost" data-act="closeov">${tt('เก็บเข้ากระเป๋า','Keep')}</button>${again}</div></div>`;
   render();
 }
+function openSBox(){if(S.sbox<1)return;S.sbox--;const it=rollItem({minRar:2});save();showLoot(tt('กล่องจุ่มพิเศษ','Special box'),[it],`<p class="tiny muted">${tt('การันตี Special ขึ้นไป','Special or better guaranteed')}</p>`)}
+function buyPotion(){if(S.crystals<POTION_C){sfx('bad');toast(tt('ผลึกไม่พอ','Not enough crystals'),'bad');return}S.crystals-=POTION_C;S.potions++;sfx('coin');save();render();toast(`${ico('potion',16)} +1`,'gold')}
+function salvSelected(){const ids=ui.salv||[];if(!ids.length)return;const eqIds=Object.values(S.eq);let g=0,n=0;S.inv=S.inv.filter(i=>{if(ids.includes(i.id)&&!eqIds.includes(i.id)){g+=salvVal(i);n++;return false}return true});S.crystals+=g;ui.salv=null;sfx('coin');save();render();toast(`${tt(`แยก ${n} ชิ้น`,`Dismantled ${n}`)} · ${ico('crystal',16)} +${g}`,'gold')}
 const fmtStat=(k,v)=>`${STATL[k]} +${v}`;
 function openItem(id){
   const it=S.inv.find(i=>i.id===id);if(!it)return;const cur=eqItem(it.slot),eq=cur&&cur.id===it.id;
   const now=curStats(),tryH=computeStats(heroDef(it));const wear=canWear(it);
   const base=baseStats(it.slot,it.lv,it.sty,it.cls),mul=1+.08*it.up;
-  const cost=upCost(it.up),ch=UPR[it.up]??0,salv=(it.rar+1)*3+it.up*2+Math.floor(it.lv/2);
+  const cost=upCost(it.up),ch=UPR[it.up]??0,salv=salvVal(it);
   const totalRow=(k,lbl,suf='')=>{const a=now[k],b=tryH[k],dl=+(b-a).toFixed(2);return `<tr><td>${lbl}</td><td>${a}${suf}</td><td>${b}${suf}</td><td class="${dl>0?'up-g':dl<0?'dn-r':''}">${dl>0?'+':''}${dl}</td></tr>`};
   const ov=$('#ov');ov.hidden=false;
   ov.innerHTML=`<div class="win stack" role="dialog" aria-label="${esc(itemName(it))}"><h2 class="wt">${N(SLOTS[it.slot].n)} · Lv${it.lv}</h2><span class="wt r" style="color:${rarColor(it.rar)}">${N(RARITY[it.rar].n)}</span>
@@ -885,24 +928,10 @@ function openItem(id){
     <div class="row">
       <button class="btn" data-act="${eq?'unequip':'equip'}" data-id="${it.id}" ${!eq&&!wear?'disabled':''}>${eq?tt('ถอด','Unequip'):tt('สวมใส่','Equip')}</button>
       <button class="btn ghost" data-act="upgrade" data-id="${it.id}" ${it.up>=10||S.crystals<cost?'disabled':''}>${it.up>=10?'MAX':`${tt('ตีบวก','Upgrade')} ${ico('crystal',16)}${cost} · ${Math.round(ch*100)}%`}</button>
-      <button class="btn ghost" data-act="salvage" data-id="${it.id}" ${eq?'disabled':''}>${tt('แยก','Salvage')} +${salv}</button>
+      <button class="btn ghost" data-act="salvage" data-id="${it.id}" ${eq?'disabled':''}>${tt('แยกเป็นผลึก','Dismantle')} +${salv}</button>
     </div><p class="tiny muted">${tt('มีผลึก','Crystals')} ${S.crystals}</p>
     <button class="btn ghost" data-act="closeov">${tt('ปิด','Close')}</button></div>`;
 }
-function openDex(key){
-  const [kind,...rest]=key.split('_');let it;
-  if(kind==='w'){const[cls,ls]=rest;it={slot:'weapon',cls,lv:parseInt(ls),sty:ls.slice(-1)}}else{const[ls,slot]=rest;it={slot,lv:parseInt(ls),sty:ls.slice(-1)}}
-  const owned=S.dex[key],s=baseStats(it.slot,it.lv,it.sty,it.cls);
-  const ov=$('#ov');ov.hidden=false;
-  ov.innerHTML=`<div class="win stack" role="dialog"><h2 class="wt">${tt('สมุดภาพ','Collection')}</h2><span class="wt r">Lv${it.lv}</span>
-    <div class="cmpwrap"><div class="cmpcol"><small>${N(SLOTS[it.slot].n)}</small><div class="item ${owned?'':'unk'}" style="width:96px">${pimg(iconURL(it,0),96,96)}</div><b>${owned?esc(itemName(it)):'???'}</b></div>
-    <div class="cmpcol new"><small>${tt('ลองใส่','Try-on')}</small>${owned?`<div class="stage" style="width:128px;height:128px">${heroAnimImg(heroLook(it),2)}</div>`:`<p class="tiny muted">${tt('ยังไม่ปลดล็อก','Locked')}</p>`}</div></div>
-    <p class="num">${owned?Object.entries(s).map(([k,v])=>fmtStat(k,v)).join(' · '):'???'}</p>
-    <p class="tiny muted">${owned?tt('เคยได้แล้ว · ความหายากสุ่มทุกครั้งที่ได้','Collected · rarity is rolled each time it drops'):tt('หาได้จาก: กล่องจุ่ม หีบ เควสพิเศษ หรือดรอปจากมอน','Found in: gacha, chests, bonus quest, monster drops')}</p>
-    <button class="btn ghost" data-act="closeov">${tt('ปิด','Close')}</button></div>`;
-}
-function dexList(){const out=[];for(const lv of ARMOR_LVS)for(const sty of['a','b'])out.push({key:`w_${S.cls}_${lv}${sty}`,slot:'weapon',cls:S.cls,lv,sty});for(const p of PARTS)for(const lv of ARMOR_LVS)for(const sty of['a','b'])out.push({key:`a_${lv}${sty}_${p}`,slot:p,lv,sty});return out}
-
 /* ---------- actions: stats/ledger book ---------- */
 function expectedBalance(){let b=S.opening||0;for(const x of S.entries)b+=x.type==='in'?x.amt:-x.amt;return b}
 function doRecon(){
@@ -921,14 +950,14 @@ function duelTier(amt,base){if(base==null)return 1;const r=amt/Math.max(base,1);
 function duelOpen(){const t=today(),dow=(pd(t).getDay()+6)%7;return dow<=1||weekStart(t)===weekStart(S.created)}
 const duelCatN=c=>c==='all'?tt('รายจ่ายที่คุมได้ทั้งหมด','All controllable spending'):catN(c);
 function duelResult(ws,p){const we=addDays(ws,6);const actual=weekSpend(ws,p.cat);let closes=0;for(let i=0;i<7;i++)if(S.closes[addDays(ws,i)])closes++;const rec=S.recon.some(r=>r.ok&&r.date>=ws&&r.date<=we);const won=actual<=p.amt;let tier=0,why='';
-  if(closes<5)why=tt(`ปิดบัญชีแค่ ${closes}/7 วัน (ต้อง 5 วัน)`,`Only ${closes}/7 days closed (need 5)`);else if(!won)why=tt('ใช้เกินเพดาน เงาชนะรอบนี้','Over the cap; the shadow wins');else{tier=Math.min(p.tier,rec?3:2);if(p.tier===3&&!rec)why=tt('ไม่มีตรวจบัญชีผ่านในสัปดาห์นั้น ได้สูงสุดขั้นเงิน','No passed check that week, capped at Silver')}
+  if(closes<5)why=tt(`Daily Check แค่ ${closes}/7 วัน (ต้อง 5 วัน)`,`Only ${closes}/7 Daily Checks (need 5)`);else if(!won)why=tt('ใช้เกินเพดาน เงาชนะรอบนี้','Over the cap; the shadow wins');else{tier=Math.min(p.tier,rec?3:2);if(p.tier===3&&!rec)why=tt('ไม่มีตรวจบัญชีผ่านในสัปดาห์นั้น ได้สูงสุดขั้นเงิน','No passed check that week, capped at Silver')}
   return{actual,closes,rec,won,tier,why}}
 function setDuel(){const amt=parseFloat(String(ui.duelAmt).replace(/,/g,''));if(!(amt>0)){toast(tt('ตั้งเพดานเป็นตัวเลข','Enter a number'),'bad');return}const ws=weekStart(today());if(S.proph[ws])return;const base=baseline(ui.duelCat);const tier=duelTier(amt,base);if(!tier){toast(tt('สูงกว่าเงาตัวเองเกิน 10% ไม่มีรางวัล','More than 10% above your shadow: no reward'),'bad');return}S.proph[ws]={cat:ui.duelCat,amt,base,tier,done:false};gain(5);toast(tt('ท้าดวลเงาแล้ว +5 พลัง','Shadow duel set +5 energy'),'gold');ui.duelAmt='';save();render()}
 function claimDuel(ws){const p=S.proph[ws];if(!p||p.done)return;const r=duelResult(ws,p);p.done=true;const lines=[];if(r.tier){const R=DUELR[r.tier];gain(R.e);S.crystals+=R.c;lines.push(`${ico('bolt',16)} +${R.e}`,`${ico('crystal',16)} +${R.c}`);if(Math.random()<R.item)lines.push(itemLine(rollItem({minRar:r.tier>=3?1:0})))}else{S.crystals+=2;lines.push(`${ico('crystal',16)} +2`)}if(r.why)lines.push(`<span class="muted tiny">${r.why}</span>`);save();reveal(tt('ศึกเงาตัวเอง','Shadow duel'),r.tier?tt(`ชนะ! ขั้น${N(DUELR[r.tier].n)}`,`Won! ${N(DUELR[r.tier].n)} tier`):tt('ยังไม่ชนะ','Not this time'),lines)}
 function doReview(){const ws=weekStart(today());if(S.reviews[ws])return;S.reviews[ws]=true;gain(20);toast(`${ico('bolt',16)} ${tt('ทบทวนสัปดาห์ +20','Weekly review +20')}`,'gold');save();render()}
 function budgetEditable(){return +today().slice(8)<=3||today()<=addDays(S.created,3)}
-function badges(){const out=S.titles.map(t=>({t:N(t),on:true}));const st=Math.max(S.best||0,streak());const ns=Object.keys(S.nospend).length,rs=S.resists.length,kills=Object.values(S.kills).reduce((a,b)=>a+b,0),dex=Object.keys(S.dex).length;
-  [[st>=3,tt('ไฟวินัยจุดติด','Spark of Discipline')],[st>=7,tt('ไฟไม่มอด 7 วัน','7-Day Flame')],[st>=30,tt('เปลวเพลิงนิรันดร์','Eternal Flame')],[ns>=3,tt('สายไม่จ่าย','No-Spend Monk')],[rs>=5,tt('ผู้ต้านกิเลส','Temptation Breaker')],[kills>=50,tt('นักล่ากิเลส','Desire Hunter')],[dex>=25,tt('นักสะสมแฟชั่น','Fashion Collector')],[S.inv.some(i=>i.rar>=4),tt('ผู้ถือตำนาน','Legend Bearer')],[(S.kills.drake||0)>=1,tt('ผู้สยบมังกรฟอโม่','FOMO Slayer')]].forEach(([ok,t])=>out.push({t,on:ok}));return out}
+function badges(){const out=S.titles.map(t=>({t:N(t),on:true}));const st=Math.max(S.best||0,streak());const ns=Object.keys(S.nospend).length,rs=S.resists.length,kills=Object.values(S.kills).reduce((a,b)=>a+b,0);
+  [[st>=3,tt('ไฟวินัยจุดติด','Spark of Discipline')],[st>=7,tt('ไฟไม่มอด 7 วัน','7-Day Flame')],[st>=30,tt('เปลวเพลิงนิรันดร์','Eternal Flame')],[ns>=3,tt('สายไม่จ่าย','No-Spend Monk')],[rs>=5,tt('ผู้ต้านกิเลส','Temptation Breaker')],[kills>=50,tt('นักล่ากิเลส','Desire Hunter')],[S.inv.some(i=>i.up>=10),tt('ช่างตีบวกในตำนาน','Master Smith')],[towerState().best>=10||(S.towerBest||0)>=10,tt('นักไต่หอคอย','Tower Climber')],[towerState().best>=30||(S.towerBest||0)>=30,tt('ผู้พิชิตยอดหอคอย','Tower Conqueror')],[S.inv.some(i=>i.rar>=4),tt('ผู้ถือตำนาน','Legend Bearer')],[(S.kills.drake||0)>=1,tt('ผู้สยบมังกรฟอโม่','FOMO Slayer')]].forEach(([ok,t])=>out.push({t,on:ok}));return out}
 
 /* ---------- battle ---------- */
 const B={sim:null};
@@ -937,13 +966,13 @@ function startBattle(id){
   clearTimeout(B.rep);
   const m=MONS.find(x=>x.id===id);
   if(m.minLv&&S.lv<m.minLv){toast(tt(`ต้อง Lv${m.minLv} ขึ้นไป`,`Requires Lv${m.minLv}`),'bad');return}
-  if(S.energy<m.cost){toast(tt(`พลังไม่พอ ต้องใช้ ${m.cost}`,`Need ${m.cost} energy`),'bad');closeBattle();return}
+  tickE();if(S.energy<m.cost){sfx('bad');toast(tt(`พลังไม่พอ ต้องใช้ ${m.cost}`,`Need ${m.cost} energy`),'bad');closeBattle();return}
   const hs=hpState();if(hs.hp<1){toast(tt(`เลือดหมด รอฟื้น ${fmtT(hs.next)} หรือดื่มยา`,`No HP. Wait ${fmtT(hs.next)} or drink a potion`),'bad');closeBattle();return}
-  S.energy-=m.cost;
+  spendE(m.cost);
   const p=buildHero(heroDef()),mu=buildMon(m);p.hp=hs.hp;
   const rc=m.cats.find(c=>(S.rage[c]||0)>0);if(rc){S.rage[rc]--;p.buffs.rage=true}
   const fc=featuredCat();
-  Object.assign(B,{sim:new Sim(p,mu),mon:m,feat:!!(fc&&m.cats.includes(fc)),rage:rc,menu:'main',busy:false,resolve:null,cur:null,done:false,usedAuto:!!S.auto,look:heroLook()});
+  Object.assign(B,{tower:null,exitArm:false,sim:new Sim(p,mu),mon:m,feat:!!(fc&&m.cats.includes(fc)),rage:rc,menu:'main',busy:false,resolve:null,cur:null,done:false,usedAuto:!!S.auto,look:heroLook()});
   save();openBattleDOM();
   const intro=[{t:'msg',text:tt(`${N(m.name)} ปรากฏตัว!`,`${N(m.name)} appears!`)}];
   if(p.hp<p.maxhp)intro.push({t:'msg',text:tt(`เริ่มด้วยเลือด ${p.hp}/${p.maxhp}`,`Starting at ${p.hp}/${p.maxhp} HP`)});
@@ -951,8 +980,26 @@ function startBattle(id){
   if(B.feat)intro.push({t:'msg',text:tt('เป้าหมายวันนี้! EXP ×1.25','Today’s target! EXP ×1.25')});
   runBattle(intro);
 }
+function towerMons(f){
+  const k=TOWERK[f-1],sc=b=>({...b,hp:Math.round(b.hp*k),atk:Math.round(b.atk*Math.pow(k,.6)),def:Math.round(b.def*Math.pow(k,.3))});
+  return TOWERLINE[f-1].map(id=>{const m=sc(MONS.find(x=>x.id===id));return f===TOWERTOP?{...m,name:{th:'มังกรฟอโม่ ร่างคลั่ง',en:'Frenzied FOMO Dragon'},enr:true}:m});
+}
+const towerCost=f=>f>=TOWERTOP?40:10+Math.min(10,Math.ceil(f/3))*2;
+function startTower(){
+  clearTimeout(B.rep);const ts=towerState(),f=ts.best+1;if(f>TOWERTOP){closeBattle();return}
+  const cost=towerCost(f);tickE();if(S.energy<cost){sfx('bad');toast(tt(`พลังไม่พอ ต้องใช้ ${cost}`,`Need ${cost} energy`),'bad');closeBattle();return}
+  const hs=hpState();if(hs.hp<1){sfx('bad');toast(tt(`เลือดหมด รอฟื้น ${fmtT(hs.next)} หรือดื่มยา`,`No HP. Wait ${fmtT(hs.next)} or drink a potion`),'bad');closeBattle();return}
+  spendE(cost);const mons=towerMons(f);const p=buildHero(heroDef());p.hp=hs.hp;
+  Object.assign(B,{tower:{f,mons,i:0},exitArm:false,sim:new Sim(p,buildMon(mons[0])),mon:mons[0],feat:false,rage:null,menu:'main',busy:false,resolve:null,cur:null,done:false,usedAuto:!!S.auto,look:heroLook()});
+  save();openBattleDOM();
+  const intro=[{t:'msg',text:tt(`หอคอยชั้น ${f} · ศัตรู ${mons.length} ตัว`,`Tower floor ${f} · ${mons.length} foes`)},{t:'msg',text:tt(`${N(mons[0].name)} ขวางทาง!`,`${N(mons[0].name)} blocks the way!`)}];
+  if(p.hp<p.maxhp)intro.push({t:'msg',text:tt(`เริ่มด้วยเลือด ${p.hp}/${p.maxhp}`,`Starting at ${p.hp}/${p.maxhp} HP`)});
+  runBattle(intro);
+}
+function countKill(m){const c=D().c;c.mon[m.id]=(c.mon[m.id]||0)+1;S.kills[m.id]=(S.kills[m.id]||0)+1}
 async function runBattle(intro){
-  const sim=B.sim;await play(intro);
+  let sim=B.sim;await play(intro);
+  for(;;){
   while(!sim.over&&B.sim===sim){
     const u=sim.next();B.cur=u;B.menu='main';updBattle();
     let ev=sim.startTurn(u);if(ev.length)await play(ev);
@@ -964,7 +1011,13 @@ async function runBattle(intro){
     if(B.sim!==sim)return;
     sim.endTurn(u);updBattle();
   }
-  if(B.sim===sim)finishBattle();
+  if(B.sim!==sim)return;
+  const T=B.tower;
+  if(T&&sim.win&&!sim.fled&&T.i<T.mons.length-1){
+    addSimStats(sim);countKill(T.mons[T.i]);T.i++;const P=sim.P;P.buffs={};const m=T.mons[T.i];sfx('kill');await sleep(500);if(B.sim!==sim)return;
+    B.mon=m;B.sim=sim=new Sim(P,buildMon(m));openBattleDOM();await play([{t:'msg',text:tt(`ศัตรูตัวที่ ${T.i+1}/${T.mons.length}: ${N(m.name)}!`,`Foe ${T.i+1}/${T.mons.length}: ${N(m.name)}!`)}]);continue}
+  break}
+  finishBattle();
 }
 async function autoTurn(){const sim=B.sim,p=sim.P,pl=sim.autoPlan();if(pl.move!=null&&sim.reach().includes(pl.move))await play(sim.move(p,pl.move));await play(sim.act(p,pl.action))}
 async function playerAct(a){if(!B.resolve||B.busy)return;B.busy=true;updBattle();await play(B.sim.act(B.sim.P,a));B.busy=false;B.resolve()}
@@ -980,12 +1033,12 @@ async function attackAnim(side){
 async function playOne(e){
   switch(e.t){
     case 'move':setPos(e.who,e.to);await sleep(e.dash?260:400);break;
-    case 'say':setMsg(e.text,e.skill);await sleep(e.skill?480:260);break;
+    case 'say':setMsg(e.text,e.skill);if(e.skill)sfx('skill');await sleep(e.skill?480:260);break;
     case 'msg':case 'extra':setMsg(e.text,e.t==='extra');await sleep(560);break;
-    case 'hit':{const fx=e.fx||'slash';if(['bullet','mana','dark','breath'].includes(fx))await shoot(e.a,e.d,fx);
-      if(e.miss)floatTxt(e.d,'MISS','miss');else{hitFlash(e.d);floatTxt(e.d,(e.crit?'CRIT ':'')+e.dmg,e.crit?'crit':'')}
+    case 'hit':{const fx=e.fx||'slash';if(['bullet','mana','dark','breath'].includes(fx)){sfx('shot');await shoot(e.a,e.d,fx)}
+      if(e.miss){sfx('miss');floatTxt(e.d,'MISS','miss')}else{sfx(e.crit?'crit':'hit');hitFlash(e.d);floatTxt(e.d,(e.crit?'CRIT ':'')+e.dmg,e.crit?'crit':'')}
       updUnits();await sleep(300);break}
-    case 'heal':floatTxt(e.who,'+'+e.amt,'heal');if(e.text)setMsg(e.text);updUnits();await sleep(420);break;
+    case 'heal':sfx('heal');floatTxt(e.who,'+'+e.amt,'heal');if(e.text)setMsg(e.text);updUnits();await sleep(420);break;
     case 'dot':floatTxt(e.who,'-'+e.dmg,'dot');setMsg(e.text);updUnits();await sleep(420);break;
   }
 }
@@ -999,10 +1052,11 @@ function layoutLane(){const w=$('#lanewrap');if(!w)return;const lane=$('#lane');
 function openBattleDOM(){
   const el=$('#battle');el.hidden=false;document.body.classList.add('lock');el.style.setProperty('--spd',S.speed||1);
   const sim=B.sim,m=B.mon;const bx=s=>`<div class="bbox ${s==='p'?'me':'en'}"><div class="nm"><span>${s==='p'?esc(S.name):N(m.name)}</span><span>LV${s==='p'?S.lv:m.lv}</span></div><div class="bar"><i id="hb-${s}"></i></div><div class="spread"><span>HP</span><span class="num" id="ht-${s}"></span></div>${s==='p'?`<div class="bar thin"><i id="mb-p" style="--c:var(--energy)"></i></div><div class="spread"><span>MP</span><span class="num" id="mt-p"></span></div>`:''}<div class="bchips" id="ch-${s}"></div></div>`;
-  el.innerHTML=`<div class="bwrap">${bx('m')}<div class="order" id="b-order"></div>
+  const T=B.tower;
+  el.innerHTML=`<div class="bwrap"><div class="btop"><button class="btn sm ghost backbtn" data-act="bexit" id="bexit">← ${tt('ออกจากการต่อสู้','Leave battle')}</button><span class="tiny muted">${T?tt(`หอคอยชั้น ${T.f} · ตัวที่ ${T.i+1}/${T.mons.length}`,`Tower F${T.f} · foe ${T.i+1}/${T.mons.length}`):''}</span></div>${bx('m')}<div class="order" id="b-order"></div>
     <div class="arena"><div class="lanewrap" id="lanewrap"><div class="lane" id="lane">${Array.from({length:LANE},(_,i)=>`<button class="tile" data-act="tile" data-v="${i}" aria-label="tile ${i+1}"></button>`).join('')}</div>
       <div class="unit" id="u-p" style="--p:${sim.P.pos}"><div class="sp">${heroAnimImg(B.look,1)}</div></div>
-      <div class="unit m" id="u-m" style="--p:${sim.M.pos}"><div class="sp">${monAnimImg(m,monSize(m))}</div></div></div></div>
+      <div class="unit m ${m.enr?'enr':''}" id="u-m" style="--p:${sim.M.pos}"><div class="sp">${monAnimImg(m,monSize(m))}</div></div></div></div>
     ${bx('p')}<div class="bmsg" id="b-msg"></div><div id="b-cmd"></div><div class="ctl" id="b-ctl"></div></div>`;
   layoutLane();el.scrollTop=0;updBattle();
 }
@@ -1013,13 +1067,13 @@ function updBattle(){
   const sim=B.sim;if(!sim||!$('#b-cmd'))return;updUnits();
   const mine=!!B.resolve&&!B.busy&&!S.auto&&!B.done;
   const ord=B.done?[]:[B.cur?B.cur.side:null,...sim.order(5,B.cur)].filter(Boolean);
-  $('#b-order').innerHTML=ord.length?`<span>${tt('ลำดับเทิร์น','Turn order')}</span>${ord.map((s,i)=>`<span class="o ${s} ${i===0?'now':''}">${s==='p'?pimg(heroURL(B.look),64,64):pimg(monURL(B.mon),64,64)}</span>`).join('')}<span class="tiny">SPD ${Math.round(sim.spd(sim.P))} vs ${Math.round(sim.spd(sim.M))}</span>`:'';
+  $('#b-order').innerHTML=ord.length?`<span>${tt('ลำดับเทิร์น','Turn order')}</span>${ord.map((s,i)=>`<span class="o ${s} ${i===0?'now':''} ${s==='m'&&B.mon.enr?'enr':''}">${s==='p'?pimg(heroURL(B.look),64,64):pimg(monURL(B.mon),64,64)}</span>`).join('')}<span class="tiny">SPD ${Math.round(sim.spd(sim.P))} vs ${Math.round(sim.spd(sim.M))}</span>`:'';
   const reach=mine?sim.reach():[];const P=sim.P;
   document.querySelectorAll('#lane .tile').forEach((t,i)=>{t.classList.toggle('rch',reach.includes(i));t.classList.toggle('rng',!B.done&&i>P.pos&&i<=P.pos+P.range);t.disabled=!reach.includes(i)});
   const cmd=$('#b-cmd');if(B.done)return;
   if(!mine)cmd.innerHTML=`<div class="wait">${S.auto&&B.cur&&B.cur.side==='p'?tt('ออโต้กำลังเล่นให้…','AUTO is playing…'):B.cur&&B.cur.side==='m'?tt(`ตาของ ${N(B.mon.name)}…`,`${N(B.mon.name)}’s turn…`):'…'}</div>`;
   else if(B.menu==='skill'){
-    cmd.innerHTML=`<div class="skl">${SKILLS[S.cls].map(sk=>{const lv=S.skills[sk.id];const ok=sim.canUse(sk);const why=!lv?tt(`ปลดที่ Lv${sk.unlock} + 1 SP`,`Unlock at Lv${sk.unlock} + 1 SP`):P.mp<sk.mp?tt('มานาไม่พอ','Not enough MP'):(sk.range&&sim.dist()>sk.range)?tt('ไกลเกินไป','Out of range'):'';return `<button class="btn ${ok?'':'ghost'}" data-act="bskill" data-v="${sk.id}" ${ok?'':'disabled'}><span><b>${N(sk.name)}${lv?` Lv${lv}`:''}</b><small>${why||sk.d(sim.skillVal(sk))}</small></span><span class="num" style="font-size:18px">MP ${sk.kind==='mana'?`${sk.mp}+`:sk.mp}${sk.range?` · ${sk.range}`:''}</span></button>`}).join('')}<button class="btn ghost" data-act="bmenu" data-v="main">${tt('กลับ','Back')}</button></div>`;
+    cmd.innerHTML=`<div class="skl"><button class="btn ghost backbtn" data-act="bmenu" data-v="main">← ${tt('กลับไปเมนูหลัก','Back to commands')}</button>${SKILLS[S.cls].map(sk=>{const lv=S.skills[sk.id];const ok=sim.canUse(sk);const why=!lv?tt(`ปลดที่ Lv${sk.unlock} + 1 SP`,`Unlock at Lv${sk.unlock} + 1 SP`):P.mp<sk.mp?tt('มานาไม่พอ','Not enough MP'):(sk.range&&sim.dist()>sk.range)?tt('ไกลเกินไป','Out of range'):'';return `<button class="btn ${ok?'':'ghost'}" data-act="bskill" data-v="${sk.id}" ${ok?'':'disabled'}><span><b>${N(sk.name)}${lv?` Lv${lv}`:''}</b><small>${why||sk.d(sim.skillVal(sk))}</small></span><span class="num" style="font-size:18px">MP ${sk.kind==='mana'?`${sk.mp}+`:sk.mp}${sk.range?` · ${sk.range}`:''}</span></button>`}).join('')}</div>`;
   }else{
     const inR=sim.dist()<=P.range;
     cmd.innerHTML=`<div class="cmd"><button class="btn" data-act="batk" ${inR?'':'disabled'}>${tt('โจมตี','Attack')}<small>${inR?tt(`ระยะ ${P.range} ช่อง`,`Range ${P.range}`):tt(`ไกลไป ต้องอยู่ใน ${P.range} ช่อง`,`Too far, need ${P.range}`)}</small></button><button class="btn" data-act="bmenu" data-v="skill">${tt('สกิล','Skills')}<small>MP ${P.mp}/${P.maxmp}</small></button><button class="btn ghost" data-act="bwait">${tt('รอ / ตั้งหลัก','Wait')}<small>MP +${P.regen*2}</small></button><button class="btn ghost" data-act="bflee">${tt('หนี','Flee')}<small>${tt('ไม่คืนพลัง','No refund')}</small></button></div>
@@ -1027,44 +1081,61 @@ function updBattle(){
   }
   $('#b-ctl').innerHTML=`<button class="btn sm tog ${S.auto?'on':''}" data-act="bauto" aria-pressed="${!!S.auto}">AUTO ${S.auto?'ON':'OFF'}</button><button class="btn sm ghost" data-act="bspeed">×${S.speed||1}</button><button class="btn sm tog ${S.repeat?'on':''}" data-act="brepeat" aria-pressed="${!!S.repeat}">${tt('ล่าซ้ำ','Repeat')} ${S.repeat?'ON':'OFF'}</button>`;
 }
+function addSimStats(sim){const c=D().c;c.skill+=sim.stats.skill;c.crit+=sim.stats.crit;c.step+=sim.stats.step}
 function finishBattle(){
-  const sim=B.sim,m=B.mon,P=sim.P;B.done=true;const lines=[];const win=sim.win&&!sim.fled;const c=D().c;
-  c.skill+=sim.stats.skill;c.crit+=sim.stats.crit;c.step+=sim.stats.step;
-  setHP(sim.fled?P.hp:win?P.hp:0);
-  if(sim.fled){lines.push(tt('หนีออกมาได้ พลังที่ใช้ไปไม่คืน','Escaped; energy not refunded'));c.run=0}
-  else if(win){D().won++;c.win++;c.mon[m.id]=(c.mon[m.id]||0)+1;c.run=(c.run||0)+1;c.chain=Math.max(c.chain||0,c.run);if(P.hp/P.maxhp>.5)c.hp50++;if(!B.usedAuto)c.manual++;S.kills[m.id]=(S.kills[m.id]||0)+1;
-    let xp=m.exp;if(m.lv<=S.lv-3)xp=Math.round(xp*.5);if(B.feat)xp=Math.round(xp*1.25);const lv0=S.lv;const ups=addExp(xp);
-    lines.push(lv0>=LVCAP?tt(`EXP ${xp} → ผลึก (เลเวลตัน)`,`EXP ${xp} → crystals (max level)`):`EXP +${xp}${m.lv<=lv0-3?tt(' (มอนเลเวลต่ำ ลดครึ่ง)',' (low-level monster, halved)'):''}`);
-    const cr=1+Math.floor(Math.random()*2)+Math.floor(m.lv/3)+(m.boss?5:0);S.crystals+=cr;lines.push(`${ico('crystal',16)} ${tt('ผลึก','Crystals')} +${cr}`);
-    if(m.boss)lines.push(itemLine(rollItem({ref:S.lv})));else if(Math.random()<MONDROP)lines.push(itemLine(rollItem({ref:m.lv,maxRar:2})));
-    if(ups)lines.push(lvLine(ups));
-  }else{c.run=0;const xp=Math.round(m.exp*.25);const ups=addExp(xp);lines.push(sim.timeout?tt('กิเลสหนีไปได้ (เกินเวลา)','It escaped (time out)'):tt('ล้มลง… เลือดหมด ต้องรอฟื้น','Defeated… wait for HP to recover'));lines.push(tt(`EXP ปลอบใจ +${xp}`,`Consolation EXP +${xp}`));if(ups)lines.push(lvLine(ups))}
-  save();updBattle();
-  const hs=hpState();const again=S.energy>=m.cost&&hs.hp>=1;const rep=S.repeat&&win&&again&&hs.hp/hs.mx>=.4;
-  $('#b-cmd').innerHTML=`<div class="win stack result ${win?'':'lose'}"><h2 class="wt">${win?tt('ชัยชนะ','Victory'):tt('จบการต่อสู้','Battle over')}</h2><h3>${win?tt('กิเลสถูกสยบ!','Desire defeated!'):sim.fled?tt('ถอยทัพ','Retreat'):tt('พ่ายแพ้','Defeat')}</h3>
+  const sim=B.sim,m=B.mon,P=sim.P,T=B.tower;B.done=true;const lines=[];const win=sim.win&&!sim.fled;const c=D().c;
+  addSimStats(sim);let hpAfter=sim.fled||win?P.hp:0;
+  if(sim.fled){lines.push(T?tt('ถอยออกจากหอคอย พลังที่ใช้ไปไม่คืน','Left the tower; energy not refunded'):tt('หนีออกมาได้ พลังที่ใช้ไปไม่คืน','Escaped; energy not refunded'));c.run=0}
+  else if(win){D().won++;c.win++;c.run=(c.run||0)+1;c.chain=Math.max(c.chain||0,c.run);if(P.hp/P.maxhp>.5)c.hp50++;if(!B.usedAuto)c.manual++;countKill(m);
+    const lv0=S.lv;
+    if(T){const ts=towerState(),f=T.f;ts.best=Math.max(ts.best,f);S.towerBest=Math.max(S.towerBest||0,f);bump('tower');
+      const xp=Math.round(T.mons.reduce((a,x)=>a+x.exp,0)*.6),ups=addExp(xp),cr=3+Math.ceil(f/2);S.crystals+=cr;
+      lines.push(lv0>=LVCAP?tt(`EXP ${xp} → ผลึก (เลเวลตัน)`,`EXP ${xp} → crystals (max level)`):`EXP +${xp}`,`${ico('crystal',16)} ${tt('ผลึก','Crystals')} +${cr}`);
+      const heal=Math.round(P.maxhp*TOWER_HEAL);if(hpAfter<P.maxhp){hpAfter=Math.min(P.maxhp,hpAfter+heal);lines.push(`${ico('heart',16)} ${tt(`พักที่บันได ฟื้น HP ${Math.round(TOWER_HEAL*100)}%`,`Rest on the stairs: +${Math.round(TOWER_HEAL*100)}% HP`)}`)}
+      if(f%10===0){S.sbox++;lines.push(`${ico('gacha',18)} <b style="color:var(--r-s)">${tt('กล่องจุ่มพิเศษ +1 (การันตี Special+)','Special box +1 (Special+ guaranteed)')}</b>`)}
+      if(f===TOWERTOP)lines.push(itemLine(rollItem({minRar:4})));else if(Math.random()<MONDROP)lines.push(itemLine(rollItem({ref:Math.min(10,Math.ceil(f/3)),maxRar:2})));
+      if(ups)lines.push(lvLine(ups));
+    }else{
+      let xp=m.exp;if(m.lv<=S.lv-3)xp=Math.round(xp*.5);if(B.feat)xp=Math.round(xp*1.25);const ups=addExp(xp);
+      lines.push(lv0>=LVCAP?tt(`EXP ${xp} → ผลึก (เลเวลตัน)`,`EXP ${xp} → crystals (max level)`):`EXP +${xp}${m.lv<=lv0-3?tt(' (มอนเลเวลต่ำ ลดครึ่ง)',' (low-level monster, halved)'):''}`);
+      const cr=1+Math.floor(Math.random()*2)+Math.floor(m.lv/3)+(m.boss?5:0);S.crystals+=cr;lines.push(`${ico('crystal',16)} ${tt('ผลึก','Crystals')} +${cr}`);
+      if(m.boss)lines.push(itemLine(rollItem({ref:S.lv})));else if(Math.random()<MONDROP)lines.push(itemLine(rollItem({ref:m.lv,maxRar:2})));
+      if(ups)lines.push(lvLine(ups));
+    }
+  }else{c.run=0;const xp=Math.round(m.exp*.25);const ups=addExp(xp);lines.push(sim.timeout?tt('กิเลสหนีไปได้ (เกินเวลา)','It escaped (time out)'):T?tt(`ล้มลงที่ชั้น ${T.f}… ต้องรอฟื้นเลือด ชั้นที่ผ่านแล้วยังเซฟอยู่`,`Fell on floor ${T.f}… recover HP; cleared floors stay saved`):tt('ล้มลง… เลือดหมด ต้องรอฟื้น','Defeated… wait for HP to recover'));lines.push(tt(`EXP ปลอบใจ +${xp}`,`Consolation EXP +${xp}`));if(ups)lines.push(lvLine(ups))}
+  setHP(hpAfter);
+  sfx(win?'win':sim.fled?'bad':'lose');save();updBattle();
+  const hs=hpState(),nextF=T?towerState().best+1:0,cost=T?towerCost(nextF):m.cost,more=!T||nextF<=TOWERTOP;
+  const again=more&&S.energy>=cost&&hs.hp>=1;const rep=S.repeat&&win&&again&&hs.hp/hs.mx>=.4;
+  const againLbl=T?(nextF>TOWERTOP?tt('พิชิตยอดหอคอยแล้ว!','Tower conquered!'):win?tt(`ขึ้นชั้น ${nextF} · พลัง ${cost}`,`Climb to F${nextF} · ${cost}`):tt(`ลองชั้น ${nextF} อีกครั้ง · พลัง ${cost}`,`Retry F${nextF} · ${cost}`)):tt(`สู้อีก · พลัง ${m.cost}`,`Fight again · ${m.cost}`);
+  $('#b-cmd').innerHTML=`<div class="win stack result ${win?'':'lose'}"><h2 class="wt">${win?tt('ชัยชนะ','Victory'):tt('จบการต่อสู้','Battle over')}</h2><h3>${win?(T?tt(`เคลียชั้น ${T.f}!`,`Floor ${T.f} cleared!`):tt('กิเลสถูกสยบ!','Desire defeated!')):sim.fled?tt('ถอยทัพ','Retreat'):tt('พ่ายแพ้','Defeat')}</h3>
     <div class="loot">${lines.map(l=>`<div>${l}</div>`).join('')}</div>
     <p class="tiny muted">${tt('พลัง','Energy')} ${S.energy}/${MAXE} · HP ${hs.hp}/${hs.mx} · ${hpInfo()}</p>
     ${S.repeat&&win&&!rep&&hs.hp/hs.mx<.4?`<p class="tiny badmsg">${tt('ล่าซ้ำหยุด เพราะเลือดต่ำกว่า 40%','Repeat stopped: HP below 40%')}</p>`:''}
-    <div class="row"><button class="btn ghost" data-act="bclose">${tt('กลับ','Back')}</button><button class="btn" data-act="bagain" ${again?'':'disabled'}>${rep?tt('ล่าซ้ำใน 2 วิ…','Repeating in 2s…'):tt(`สู้อีก · พลัง ${m.cost}`,`Fight again · ${m.cost}`)}</button>${rep?`<button class="btn ghost" data-act="bstop">${tt('หยุดล่าซ้ำ','Stop repeat')}</button>`:''}${S.potions>0&&hs.hp<hs.mx?`<button class="btn ghost" data-act="potion">${ico('potion',16)} ×${S.potions}</button>`:''}</div></div>`;
-  setMsg(win?tt(`${N(m.name)} ถูกสยบ!`,`${N(m.name)} defeated!`):tt('การต่อสู้จบลง','The battle ends'));
-  if(rep)B.rep=setTimeout(()=>{if(B.done&&!$('#battle').hidden)startBattle(m.id)},2000/(S.speed||1));
+    <button class="btn" data-act="bagain" ${again?'':'disabled'}>${rep?tt('ไปต่อใน 2 วิ…','Continuing in 2s…'):againLbl}</button>
+    <div class="row">${rep?`<button class="btn ghost" data-act="bstop">${tt('หยุดล่าซ้ำ','Stop repeat')}</button>`:''}${S.potions>0&&hs.hp<hs.mx?`<button class="btn ghost" data-act="potion">${ico('potion',16)} ×${S.potions}</button>`:''}</div>
+    <button class="btn ghost backbtn" data-act="bclose">← ${T?tt('กลับหน้าหอคอย','Back to the tower'):tt('กลับหน้าล่า','Back to hunting')}</button></div>`;
+  setMsg(win?(T?tt(`ชั้น ${T.f} ผ่านแล้ว!`,`Floor ${T.f} cleared!`):tt(`${N(m.name)} ถูกสยบ!`,`${N(m.name)} defeated!`)):tt('การต่อสู้จบลง','The battle ends'));
+  $('#bexit').innerHTML=`← ${tt('กลับ','Back')}`;
+  if(rep)B.rep=setTimeout(()=>{if(B.done&&!$('#battle').hidden)againBattle()},2000/(S.speed||1));
 }
+function againBattle(){if(B.tower)startTower();else startBattle(B.mon.id)}
 function closeBattle(){clearTimeout(B.rep);B.sim=null;const el=$('#battle');el.hidden=true;el.innerHTML='';document.body.classList.remove('lock');render()}
 
 /* ---------- views ---------- */
 function hud(){
-  $('#langbtn').textContent=LANG==='th'?'EN':'ไทย';$('#guidebtn').textContent=tt('คู่มือ','Guide');document.documentElement.lang=LANG;
+  $('#langbtn').textContent=LANG==='th'?'EN':'ไทย';const sb=$('#sndbtn');if(sb){sb.textContent=SND.on?'♪':'♪̸';sb.setAttribute('aria-pressed',SND.on);sb.setAttribute('aria-label',tt(SND.on?'ปิดเสียง':'เปิดเสียง',SND.on?'Mute':'Unmute'))}$('#guidebtn').textContent=tt('คู่มือ','Guide');document.documentElement.lang=LANG;
   const h=$('#hud');if(!S){h.innerHTML=`<span class="tiny muted">${tt('สร้างตัวละครเพื่อเริ่มผจญภัย','Create a hero to begin')}</span>`;return}
-  const cap=S.lv>=LVCAP,hs=hpState();
+  tickE();const cap=S.lv>=LVCAP,hs=hpState();
   h.innerHTML=`<div class="hud-row"><span class="lvtag">LV${S.lv}</span><div class="bar thin"><i style="--c:var(--exp);width:${cap?100:S.exp/NEED[S.lv]*100}%"></i></div><span class="pair">${ico('flame',16)}<span class="num" style="min-width:0;font-size:19px">${streak()}</span></span><span class="pair">${ico('shield',14)}<span class="num" style="min-width:0">${S.shields}</span></span></div>
    <div class="hud-row">${ico('heart',14)}<div class="bar thin"><i style="--c:${hs.hp/hs.mx>.5?'var(--exp)':hs.hp/hs.mx>.2?'var(--gold)':'var(--hp)'};width:${hs.hp/hs.mx*100}%"></i></div><span class="num">${hs.hp<hs.mx?fmtT(hs.next):hs.hp}</span></div>
    <div class="hud-row">${ico('bolt',14)}<div class="bar thin"><i style="--c:var(--energy);width:${S.energy/MAXE*100}%"></i></div><span class="num">${S.energy}/${MAXE}</span></div>`;
 }
 function nav(){
-  const bar=$('#navbar');bar.hidden=!S;if(!S)return;const d=D();
-  const dot={hero:S.pts>0||(S.sp>0&&SKILLS[S.cls].some(s=>S.lv>=s.unlock&&S.skills[s.id]<5)),bag:S.chests>0||S.tickets>0,ledger:!S.closes[today()]||d.q.some((q,i)=>!d.qc[i]&&qProg(q)>=q.need)||(d.qc.every(Boolean)&&!d.bonus)};
-  const items=[['ledger',tt('บันทึก','Ledger'),'bill'],['hunt',tt('ล่า','Hunt'),'sword'],['hero',tt('ฮีโร่','Hero'),'helm'],['bag',tt('กระเป๋า','Bag'),'chest'],['stats',tt('สถิติ','Stats'),'chart']];
-  $('#nav').innerHTML=items.map(([id,th,ic])=>`<button class="${ui.view===id?'on':''}" data-act="view" data-v="${id}" ${ui.view===id?'aria-current="page"':''}>${ui.view===id?ico(ic,24):ico(ic,24,NAVPAL)}<span>${th}</span>${dot[id]?'<i class="dotn"></i>':''}</button>`).join('');
+  const bar=$('#navbar');bar.hidden=!S;if(!S)return;const d=D(),t=today();
+  const dot={log:d.slots<LOGMAX&&!S.nospend[t],check:!S.closes[t]||d.q.some((q,i)=>!d.qc[i]&&qProg(q)>=q.need)||(d.qc.every(Boolean)&&!d.bonus),hunt:false,hero:S.pts>0||(S.sp>0&&SKILLS[S.cls].some(s=>S.lv>=s.unlock&&S.skills[s.id]<5))||S.chests>0||S.sbox>0||S.tickets>0};
+  const items=[['log',tt('จดบัญชี','Log'),'bill'],['check',tt('เช็คบัญชี','Check'),'chart'],['hunt',tt('ล่า','Hunt'),'sword'],['hero',tt('ฮีโร่','Hero'),'helm']];
+  $('#nav').innerHTML=items.map(([id,th,ic],i)=>`<button class="${ui.view===id?'on':''} ${i===2?'gs':''}" data-act="view" data-v="${id}" ${ui.view===id?'aria-current="page"':''}>${ui.view===id?ico(ic,24):ico(ic,24,NAVPAL)}<span>${th}</span>${dot[id]?'<i class="dotn"></i>':''}</button>`).join('');
 }
 function meter(cls){return `<div class="meter">${CLASSES[cls].meter.map((v,i)=>`<span>${N(METER[i])}</span><div class="bar"><i style="--c:var(--gold);width:${v*20}%"></i></div>`).join('')}</div>`}
 const starterEq=cls=>({weapon:{lv:2,sty:'a'},body:{lv:2,sty:'a'},legs:{lv:2,sty:'a'}});
@@ -1101,7 +1172,7 @@ function createChar(){
   const nmv=cr.name.trim();if(!nmv){toast(tt('ตั้งชื่อตัวละครก่อน','Name your hero first'),'bad');$('#crname')&&$('#crname').focus();return}
   if(!cr.arm){cr.arm=true;render();return}
   const t=today(),C=CLASSES[cr.cls],K=CARRY||{};
-  S={v:4,ver:SAVEVER,lang:LANG,name:nmv.slice(0,12),cls:cr.cls,hair:cr.hair,hc:cr.hc,eye:cr.eye,skin:cr.skin,created:K.created||t,lv:1,exp:0,sp:0,pts:0,stats:{...C.start},skills:{},energy:60,overflow:0,
+  S={v:4,ver:SAVEVER,lang:LANG,name:nmv.slice(0,12),cls:cr.cls,hair:cr.hair,hc:cr.hc,eye:cr.eye,skin:cr.skin,created:K.created||t,lv:1,exp:0,sp:0,pts:0,stats:{...C.start},skills:{},energy:MAXE,eAt:Date.now(),overflow:0,sbox:0,tower:{m:'',best:0},
     crystals:(K.crystals||0)+10,tickets:K.tickets||0,chests:K.chests||0,potions:(K.potions||0)+2,hp:null,hpAt:Date.now(),
     entries:K.entries||[],nid:K.nid||1,daily:{},closes:K.closes||{},nospend:K.nospend||{},shieldUsed:K.shieldUsed||{},shields:K.shields||0,settled:K.settled||addDays(t,-1),best:K.best||0,resists:K.resists||[],rage:K.rage||{},opening:K.opening??null,recon:K.recon||[],reviews:K.reviews||{},proph:K.proph||{},titles:K.titles||[],monthSettled:K.monthSettled||t.slice(0,7),
     budget:{food:6000,drink:1200,grocery:2000,home:5000,travel:1500,shop:1500,bill:1200,health:600,fun:800,other:600,...(K.budget||{})},inv:[],iid:1,dex:{},eq:{weapon:null,head:null,body:null,arms:null,legs:null},kills:{},pity:0,auto:false,speed:1,repeat:false};
@@ -1109,48 +1180,36 @@ function createChar(){
   SKILLS[S.cls].forEach((s,i)=>S.skills[s.id]=i===0?1:0);
   for(const sl of['weapon','body','legs']){const it=addItem(makeItem(sl,2,'a',0));S.eq[sl]=it.id}
   try{if(CARRY)localStorage.removeItem(V3KEY)}catch(e){}CARRY=null;
-  save();ui.view='ledger';render();window.scrollTo(0,0);
-  toast(tt(`ยินดีต้อนรับ ${esc(S.name)} · จดรายการแรกเพื่อเปิดการ์ด`,`Welcome ${esc(S.name)} · log your first entry to flip a card`),'gold');
+  save();ui.view='log';render();window.scrollTo(0,0);
+  sfx('level');toast(tt(`ยินดีต้อนรับ ${esc(S.name)} · จดรายการแรกเพื่อเปิดการ์ด`,`Welcome ${esc(S.name)} · log your first entry to flip a card`),'gold');
 }
-function vLedger(){
-  const t=today(),d=D(),y=addDays(t,-1),st=streak(),closedT=!!S.closes[t];
-  const spentT=S.entries.some(e=>e.type==='out'&&e.date===t),hr=new Date().getHours();
-  let cal='';for(let i=13;i>=0;i--){const k=addDays(t,-i),dt=pd(k),c=S.closes[k],sh=S.shieldUsed[k],ns=S.nospend[k];cal+=`<div class="${c?'ok':''} ${sh?'sh':''} ${k===t?'td':''} ${k<S.created?'pre':''}" title="${fmtD(k)}"><span>${WD(dt.getDay())}</span>${c?(ns?ico('crystal',14):ico('flame',14)):sh?ico('shield',14):'<i class="dot"></i>'}<b>${dt.getDate()}</b></div>`}
-  const cats=CATS[ui.type];
-  const list=[...S.entries].sort((a,b)=>b.date.localeCompare(a.date)||b.id-a.id).slice(0,25);
-  let groups='',cur='';
-  for(const e of list){if(e.date!==cur){cur=e.date;const tot=list.filter(x=>x.date===cur&&x.type==='out').reduce((a,b)=>a+b.amt,0);const lbl=cur===t?tt('วันนี้','Today'):cur===y?tt('เมื่อวาน','Yesterday'):`${WD(pd(cur).getDay())} ${fmtD(cur)}`;groups+=`<div class="dayhead"><span>${lbl}</span><span>${tt('จ่าย','Spent')} ${baht(tot)}</span></div>`}
-    groups+=`<div class="entry">${catIco(e.cat,24)}<div style="min-width:0"><div class="n">${esc(e.note||catN(e.cat))}</div><div class="c">${catN(e.cat)}${e.logged!==e.date?tt(' · จดย้อนหลัง',' · backdated'):''}</div></div><span class="a ${e.type}">${e.type==='in'?'+':'−'}${Math.round(e.amt).toLocaleString()}</span><button class="x" data-act="del" data-id="${e.id}" aria-label="delete">${tt('ลบ','Del')}</button></div>`}
-  const allDone=d.qc.every(Boolean);
+const kfmt=n=>n>=1e5?Math.round(n/1e3)+'k':n>=1e3?(n/1e3).toFixed(1).replace(/\.0$/,'')+'k':String(Math.round(n));
+function entryRow(e){return `<div class="entry">${catIco(e.cat,24)}<div style="min-width:0"><div class="n">${esc(e.note||catN(e.cat))}</div><div class="c">${catN(e.cat)}${e.logged!==e.date?tt(' · จดย้อนหลัง',' · backdated'):''}</div></div><span class="a ${e.type}">${e.type==='in'?'+':'−'}${Math.round(e.amt).toLocaleString()}</span><button class="x" data-act="del" data-id="${e.id}" aria-label="delete">${tt('ลบ','Del')}</button></div>`}
+function entryGroups(list){const t=today(),y=addDays(t,-1);let out='',cur='';for(const e of list){if(e.date!==cur){cur=e.date;const tot=list.filter(x=>x.date===cur&&x.type==='out').reduce((a,b)=>a+b.amt,0);const lbl=cur===t?tt('วันนี้','Today'):cur===y?tt('เมื่อวาน','Yesterday'):`${WD(pd(cur).getDay())} ${fmtD(cur)}`;out+=`<div class="dayhead"><span>${lbl}</span><span>${tt('จ่าย','Spent')} ${baht(tot)}</span></div>`}out+=entryRow(e)}return out}
+function vLog(){
+  const t=today(),d=D(),spentT=S.entries.some(e=>e.type==='out'&&e.date===t),hr=new Date().getHours(),left=Math.max(0,LOGMAX-d.slots);
+  const cats=CATS[ui.type];const todays=S.entries.filter(e=>e.date===t||e.logged===t).sort((a,b)=>b.id-a.id);
   return `
-  <section class="win stack"><h2 class="wt">${tt('ปิดบัญชีประจำวัน','Daily close')}</h2><span class="wt r">${ico('shield',14)} ${S.shields}/2</span>
-    <div class="spread"><div class="streakbig">${ico('flame',30)}<span class="num">${st}</span><small>${tt('วัน<br>ติดต่อกัน','day<br>streak')}</small></div><p class="tiny muted" style="max-width:25ch">${tt('ปิดบัญชีทุกวัน แม้ไม่มีรายการก็นับสตรีค','Close every day, even with no entries, to keep the streak')}</p></div>
-    <div class="cal">${cal}</div>
-    ${canCloseYesterday()?`<button class="btn ghost" data-act="closeprep" data-v="${y}">${tt('ปิดบัญชีเมื่อวาน (ถึงเที่ยงวันนี้)','Close yesterday (until noon)')}</button>`:''}
-    ${closedT?`<p class="okmsg">${tt('ปิดบัญชีวันนี้แล้ว','Today is closed')}${S.nospend[t]?tt(' · วันไม่จ่าย!',' · No-spend day!'):''}</p>`:`
-      ${!spentT?`<div class="stack" style="gap:6px;border:2px dashed var(--win-hl);padding:10px"><b>${tt('วันนี้ไม่ได้ใช้จ่ายเลย?','Spent nothing today?')}</b><p class="tiny muted">${tt(`ยืนยันได้หลัง ${NOSPEND_HOUR}:00 ได้พลังเท่าจด ${LOGMAX} ครั้ง (${LOGMAX-d.slots} ครั้งที่เหลือ) + เปิดการ์ด และปิดบัญชีให้อัตโนมัติ`,`Confirm after ${NOSPEND_HOUR}:00: energy and cards equal to ${LOGMAX} logs (${LOGMAX-d.slots} left), and the day closes automatically`)}</p><label class="chk"><input type="checkbox" id="nscheck" ${hr<NOSPEND_HOUR?'disabled':''}> ${tt('ยืนยันว่าวันนี้ไม่ได้ใช้จ่าย','I confirm I spent nothing today')}</label><button class="btn" data-act="nospend" id="nsbtn" disabled>${hr<NOSPEND_HOUR?tt(`ยืนยันได้หลัง ${NOSPEND_HOUR}:00`,`Available after ${NOSPEND_HOUR}:00`):tt('ยืนยันวันไม่จ่าย','Confirm no-spend day')}</button></div>`:''}
-      <button class="btn big ${!spentT?'ghost':''}" data-act="closeprep" data-v="${t}">${ico('chest',20)} ${tt(`ปิดบัญชีวันนี้ · หีบ${N(CHEST[projChest(t)].n)}`,`Close today · ${N(CHEST[projChest(t)].n)} chest`)}</button>`}
-  </section>
-  <section class="win stack"><h2 class="wt">${tt('จดบัญชี','Log')}</h2><span class="wt r">${tt('รางวัล','Rewards')} ${Math.max(0,LOGMAX-d.slots)}/${LOGMAX}</span>
+  <section class="win stack"><h2 class="wt">${tt('จดบัญชี','Log')}</h2><span class="wt r">${tt('การ์ดวันนี้','Cards today')} ${left}/${LOGMAX}</span>
     <div class="seg"><button class="${ui.type==='out'?'on':''}" data-act="ltype" data-v="out">${tt('รายจ่าย','Expense')}</button><button class="${ui.type==='in'?'on':''}" data-act="ltype" data-v="in">${tt('รายรับ','Income')}</button></div>
     <label class="amtbox" for="amt"><span>฿</span><input id="amt" inputmode="decimal" autocomplete="off" placeholder="0" value="${esc(ui.amt)}" aria-label="amount"></label>
     <div class="chips">${[20,50,100,500,1000].map(n=>`<button class="chip" data-act="qamt" data-v="${n}">+${n}</button>`).join('')}<button class="chip" data-act="qamt" data-v="0" style="font-family:var(--f-th);font-size:13px">${tt('ล้าง','Clear')}</button></div>
     <div class="cats ${ui.type==='in'?'in':''}">${cats.map(c=>`<button class="cat ${ui.cat[ui.type]===c.id?'on':''}" data-act="lcat" data-v="${c.id}">${catIco(c.id,26)}<span>${N(c.n)}</span></button>`).join('')}</div>
     <input id="note" class="field" maxlength="40" placeholder="${tt('โน้ต เช่น ข้าวกะเพรา (ไม่ใส่ก็ได้)','Note, e.g. lunch (optional)')}" value="${esc(ui.note)}" aria-label="note">
     <div class="seg sm"><button class="${!ui.back?'on':''}" data-act="lday" data-v="0">${tt('วันนี้','Today')}</button><button class="${ui.back?'on':''}" data-act="lday" data-v="1">${tt('เมื่อวาน','Yesterday')}</button></div>
-    <button class="btn big" data-act="save">${tt('บันทึก','Save')}${d.slots<LOGMAX?tt(` · พลัง +${LOGE} + การ์ด`,` · +${LOGE} energy + card`):''}</button>
-    <p class="tiny muted">${tt('รางวัลการจดได้วันละ 3 ครั้ง (ครั้งละ 1/3 หลอด) จดต่อได้ไม่จำกัดแต่ไม่ได้รางวัลเพิ่ม ใช้เงินมากขึ้นจึงไม่ได้พลังมากขึ้น','Log rewards: 3 per day (1/3 bar each). Keep logging freely, but spending more never earns more.')}</p>
+    <button class="btn big" data-act="save">${tt('บันทึก','Save')}${left?tt(' · เปิดการ์ด',' · flip a card'):''}</button>
+    <p class="tiny muted">${tt('จดแต่ละครั้งได้เปิดการ์ด 1 ใบ (ผลึก ไอเทม หรือพลัง) วันละไม่เกิน 3 ใบ จดต่อได้ไม่จำกัด ยอดเงินไม่มีผลต่อรางวัล','Each log flips 1 card (crystals, an item or energy), up to 3 a day. Log as much as you like; amounts never change rewards.')}</p>
   </section>
-  <section class="win"><h2 class="wt">${tt('เควสวันนี้','Daily quests')}</h2><span class="wt r">${d.qc.filter(Boolean).length}/5</span>
-    <div>${d.q.map((q,i)=>{const p=Math.min(qProg(q),q.need);return `<div class="quest"><div class="stack" style="gap:4px"><span>${qText(q)}</span><div class="bar thin"><i style="--c:var(--gold);width:${p/q.need*100}%"></i></div><span class="rw">${ico('bolt',12)}+${QR.e} ${ico('crystal',12)}+${QR.c} EXP+${QR.x}</span></div>${d.qc[i]?`<span class="done-chip">${tt('รับแล้ว','Claimed')}</span>`:`<button class="btn sm" data-act="claim" data-v="${i}" ${p<q.need?'disabled':''}>${p}/${q.need} ${tt('รับ','Claim')}</button>`}</div>`}).join('')}</div>
-    <div class="quest bonus"><div class="stack" style="gap:3px"><b>${tt('เควสที่ 6 · ทำครบ 5 เควส','Quest 6 · finish all 5')}</b><span class="rw">${ico('ticket',14)} ${tt('ตั๋วจุ่ม 1 ใบ (ได้ทันทีที่ครบ 5)','1 gacha ticket (given when all 5 are done)')}</span><span class="rw">${ico('shirt',14)} ${tt('+ ชุดหรืออาวุธสุ่ม Advance ขึ้นไป','+ random gear, Advance or better')}</span></div>${d.bonus?`<span class="done-chip">${tt('รับแล้ว','Claimed')}</span>`:`<button class="btn sm" data-act="bonus" ${allDone?'':'disabled'}>${tt('รับ','Claim')}</button>`}</div>
-  </section>
+  ${S.nospend[t]?`<section class="win stack"><h2 class="wt">${tt('วันไม่จ่าย','No-spend day')}</h2><p class="okmsg">${ico('crystal',16)} ${tt('วันนี้ยืนยันว่าไม่ได้ใช้จ่ายแล้ว','Today is stamped as a no-spend day')}</p></section>`:!spentT?`<section class="win stack"><h2 class="wt">${tt('วันนี้ไม่ได้ใช้จ่ายเลย?','Spent nothing today?')}</h2>
+    <p class="tiny muted">${tt(`ยืนยันได้หลัง ${NOSPEND_HOUR}:00 ได้เปิดการ์ดครบ 3 ใบของวันนี้ (เหลือ ${left} ใบ ถ้าจดไปแล้วจะนับรวม)`,`Confirm after ${NOSPEND_HOUR}:00 to get the rest of today’s 3 card draws (${left} left; earlier logs count)`)}</p>
+    <label class="chk"><input type="checkbox" id="nscheck" ${hr<NOSPEND_HOUR?'disabled':''}> ${tt('ยืนยันว่าวันนี้ไม่ได้ใช้จ่าย','I confirm I spent nothing today')}</label><button class="btn" data-act="nospend" id="nsbtn" disabled>${hr<NOSPEND_HOUR?tt(`ยืนยันได้หลัง ${NOSPEND_HOUR}:00`,`Available after ${NOSPEND_HOUR}:00`):tt('ยืนยันวันไม่จ่าย','Confirm no-spend day')}</button></section>`:''}
+  <section class="win"><h2 class="wt">${tt('จดวันนี้','Logged today')}</h2><span class="wt r">${todays.length}</span><div>${todays.length?todays.map(entryRow).join(''):`<p class="muted tiny">${tt('ยังไม่มีรายการวันนี้','Nothing logged today yet')}</p>`}</div>
+    <button class="btn sm ghost" style="margin-top:10px" data-act="view" data-v="check">${tt('ดูประวัติและสถิติทั้งหมด →','All history and stats →')}</button></section>
   <section class="win stack"><h2 class="wt">${tt('ต้านกิเลส','Resist')}</h2>
     <p class="tiny muted">${tt('อยากซื้อแต่ห้ามใจได้? จดไว้ ได้พลัง +10 (วันละ 2 ครั้ง) และแต้มแค้น ตีมอนหมวดนั้นแรงขึ้น 30%','Wanted something but held back? Log it: +10 energy (2/day) and a grudge for +30% damage vs that category')}</p>
     <div class="twocol"><input id="ritem" class="field" maxlength="40" placeholder="${tt('อยากซื้ออะไร','What did you want?')}" value="${esc(ui.rItem)}" aria-label="item"><input id="ramt" class="field" inputmode="decimal" placeholder="${tt('ราคา ฿','Price ฿')}" value="${esc(ui.rAmt)}" aria-label="price"></div>
     <div class="row"><select id="rcat" class="field" style="flex:1" aria-label="category">${CATS.out.filter(c=>!FIXED.includes(c.id)).map(c=>`<option value="${c.id}" ${ui.rCat===c.id?'selected':''}>${N(c.n)}</option>`).join('')}</select><button class="btn" data-act="resist">${ico('shield',18)} ${tt('ต้านได้','Resisted')}</button></div>
-  </section>
-  <section class="win"><h2 class="wt">${tt('รายการล่าสุด','Recent')}</h2><div>${groups||`<p class="muted">${tt('ยังไม่มีรายการ เริ่มจดรายการแรกด้านบน','No entries yet. Log your first one above.')}</p>`}</div></section>`;
+  </section>`;
 }
 function vHunt(){
   const fc=featuredCat();const hero=curStats(),hs=hpState();
@@ -1164,11 +1223,15 @@ function vHunt(){
       <div class="meta">${feat?`<span class="tag y">${tt('เป้าหมายวันนี้','Today’s target')}</span>`:''}${rg?`<span class="tag r">${tt('แค้น','Grudge')} ×${rg}</span>`:''}<span class="tiny muted">${tr.join(' · ')}</span></div>
       <div class="meta"><button class="btn sm ${m.boss?'red':''}" data-act="fight" data-id="${m.id}" ${S.energy<m.cost||lock||hs.hp<1?'disabled':''}>${lock?tt(`ต้อง Lv${m.minLv}`,`Lv${m.minLv}+`):`${tt('สู้','Fight')} · ${ico('bolt',14)}${m.cost}`}</button><span class="tiny muted">EXP ${m.exp} · HP ${m.hp} · ${tt('ปราบแล้ว','Kills')} ${S.kills[m.id]||0}</span></div>
     </div></div>`};
-  return `
+  const cond=`
   <section class="win stack"><h2 class="wt">${tt('สภาพร่างกาย','Condition')}</h2>
     <div class="hpbox">${ico('heart',26)}<div class="stack" style="gap:4px;min-width:0"><div class="bar"><i style="--c:${hs.hp/hs.mx>.5?'var(--exp)':hs.hp/hs.mx>.2?'var(--gold)':'var(--hp)'};width:${hs.hp/hs.mx*100}%"></i></div><span class="tiny" id="hpinfo">HP <b class="num">${hs.hp}/${hs.mx}</b> · ${hpInfo()}</span></div><button class="btn sm ghost" data-act="potion" ${S.potions<1||hs.hp>=hs.mx?'disabled':''}>${ico('potion',18)} ×${S.potions}</button></div>
-    <p class="tiny muted">${tt(`เลือดไม่รีเซ็ตหลังสู้ ฟื้น ${Math.round(hero.hpRate*100)}% ทุก 1 นาที (VIT เพิ่มความเร็วฟื้น) ยาฟื้นฟู 50%`,`HP carries over and heals ${Math.round(hero.hpRate*100)}% per minute (VIT speeds it up). Potions restore 50%.`)}</p>
-  </section>
+    <div class="hpbox">${ico('bolt',26)}<div class="stack" style="gap:4px;min-width:0"><div class="bar"><i style="--c:var(--energy);width:${S.energy/MAXE*100}%"></i></div><span class="tiny" id="einfo">${eInfo()}</span></div></div>
+    <p class="tiny muted">${tt(`เลือดไม่รีเซ็ตหลังสู้ ฟื้น ${Math.round(hero.hpRate*100)}% ทุก 1 นาที · พลังฟื้น ${ENERGY_H} ทุก 1 ชั่วโมง · Daily Check เติมพลังเต็ม`,`HP carries over and heals ${Math.round(hero.hpRate*100)}% per minute · energy +${ENERGY_H} per hour · Daily Check refills it`)}</p>
+    <div class="seg"><button class="${ui.huntTab==='normal'?'on':''}" data-act="htab" data-v="normal">${ico('sword',18)} ${tt('ล่าปกติ','Hunt')}</button><button class="${ui.huntTab==='tower'?'on':''}" data-act="htab" data-v="tower">${ico('shield',18)} ${tt('หอคอย','Tower')} ${towerState().best}/${TOWERTOP}</button></div>
+  </section>`;
+  if(ui.huntTab==='tower')return cond+vTower();
+  return cond+`
   <section class="win"><h2 class="wt">${tt('ดันเจี้ยนแห่งกิเลส','Desire Dungeon')}</h2><span class="wt r">${ico('bolt',14)} ${S.energy}</span>
     <div class="statgrid" style="margin-bottom:10px">${[['HP',hero.maxhp],['ATK',hero.atk],['DEF',hero.def],['SPD',hero.spd],[tt('ระยะ','Range'),hero.range]].map(([k,v])=>`<span><small>${k}</small><b class="num">${v}</b></span>`).join('')}</div>
     <p class="tiny muted">${fc?tt(`วันนี้คุณจด${catN(fc)}บ่อยสุด มอนหมวดนี้ได้ EXP ×1.25`,`You logged ${catN(fc)} most today: those monsters give EXP ×1.25`):tt('มอนหมวดที่คุณจดบ่อยสุดวันนี้จะเป็นเป้าหมายวันนี้','The category you log most today becomes today’s target')} · ${tt('ชนะมอนมีโอกาสได้ไอเทม 20% สูงสุดระดับ Special','Monster wins: 20% item chance, up to Special')}</p>
@@ -1176,7 +1239,26 @@ function vHunt(){
   </section>
   <section class="win boss"><h2 class="wt" style="color:var(--hp)">${tt('บอส','Boss')}</h2>${MONS.filter(m=>m.boss).map(card).join('')}<p class="note">${tt('ปลดที่ Lv8 ชนะแล้วดรอปไอเทมแน่นอน 1 ชิ้น สุ่มความหายากเหมือนกล่องจุ่ม (ลุ้น Artifact / Legendary)','Unlocks at Lv8. Always drops 1 item with gacha odds (Artifact / Legendary possible).')}</p></section>`;
 }
+function eInfo(){tickE();return S.energy>=MAXE?`<span class="okmsg">${tt('พลังเต็ม','Energy full')}</span> ${S.energy}/${MAXE}`:`${tt('พลัง','Energy')} <b class="num">${S.energy}/${MAXE}</b> · +${ENERGY_H} ${tt('ใน','in')} <b class="num">${fmtT(eNext())}</b>`}
+function vTower(){
+  const ts=towerState(),f=ts.best+1,hs=hpState(),done=f>TOWERTOP;const d0=pd(today());const reset=new Date(d0.getFullYear(),d0.getMonth()+1,1);
+  const mons=done?[]:towerMons(f),cost=done?0:towerCost(f);
+  const cells=Array.from({length:TOWERTOP},(_,i)=>TOWERTOP-i).map(n=>`<span class="tf ${n<=ts.best?'ok':''} ${n===f?'nx':''} ${n%10===0?'ms':''}">${n%10===0?ico(n===TOWERTOP?'crystal':'gacha',14):''}${n}</span>`).join('');
+  return `<section class="win stack tower"><h2 class="wt">${tt('หอคอยกิเลส','Tower of Desire')}</h2><span class="wt r">${tt('รีเซ็ต','Resets')} ${reset.getDate()} ${MO(reset.getMonth())}</span>
+    <div class="spread"><b>${tt('ชั้นสูงสุดเดือนนี้','Best this month')}</b><span class="num" style="font-size:26px;color:var(--gold)">${ts.best}/${TOWERTOP}</span></div><div class="bar"><i style="--c:var(--gold);width:${ts.best/TOWERTOP*100}%"></i></div>
+    ${done?`<p class="okmsg">${tt('พิชิตยอดหอคอยเดือนนี้แล้ว! รอหอคอยรีเซ็ตเดือนหน้า','You conquered the tower this month! It resets next month.')}</p>`:`
+    <div class="tnext"><div class="spread"><b style="font-size:17px">${tt(`ชั้น ${f}`,`Floor ${f}`)}${f===TOWERTOP?` · <span style="color:var(--hp)">BOSS</span>`:''}</b><span class="tiny muted">${tt(`ศัตรู ${mons.length} ตัว สู้ต่อเนื่อง`,`${mons.length} foes in a row`)}</span></div>
+      <div class="tfoes">${mons.map(m=>`<div class="${m.enr?'enr':''}"><div class="stage" style="width:64px;height:64px;display:grid;place-items:center">${monAnimImg(m,Math.min(64,monSize(m)))}</div><small>${N(m.name)}</small><small class="muted">HP ${m.hp}</small></div>`).join('')}</div>
+      <button class="btn big ${f===TOWERTOP?'red':''}" data-act="tower" ${S.energy<cost||hs.hp<1?'disabled':''}>${tt(`ปีนชั้น ${f}`,`Climb floor ${f}`)} · ${ico('bolt',16)}${cost}</button>
+      ${hs.hp<hs.mx*.6?`<p class="tiny badmsg">${tt('เลือดไม่เต็ม ระหว่างศัตรูในชั้นเดียวกันเลือดไม่ฟื้น ควรรอหรือดื่มยาก่อน','HP isn’t full and won’t recover between foes on a floor; wait or drink a potion first')}</p>`:''}</div>`}
+    <div class="tgrid">${cells}</div>
+    <ul class="tiny muted tnotes"><li>${tt('เคลียชั้นไหนแล้วเซฟไว้ทั้งเดือน ปีนต่อจากชั้นถัดไปได้เลย','Cleared floors stay saved all month; continue from the next floor')}</li><li>${tt('ศัตรูในชั้นเดียวกันสู้ต่อกัน เลือดและมานาไม่ฟื้นระหว่างตัว · ผ่านชั้นแล้วพักบันไดฟื้น HP 25%','Foes on a floor come one after another with no healing between them · clearing a floor restores 25% HP')}</li><li>${tt('ชั้น 10 และ 20: กล่องจุ่มพิเศษ (Special ขึ้นไป) · ชั้น 30: มังกรฟอโม่ร่างคลั่ง ชนะได้กล่องพิเศษ + ไอเทม Legendary 1 ชิ้น','Floors 10 and 20: a special box (Special+) · Floor 30: the Frenzied FOMO Dragon, winning gives a special box + 1 Legendary item')}</li><li>${tt('Lv1 ไหวราวชั้น 1–3 · ชั้น 28–30 ต้อง Lv10 กับของตีบวกเกือบตัน','Lv1 handles about floors 1–3 · floors 28–30 need Lv10 with near-max upgraded gear')}</li></ul>
+  </section>`}
 function vHero(){
+  const tab=ui.heroTab;const seg=`<div class="seg herotabs"><button class="${tab==='info'?'on':''}" data-act="hrtab" data-v="info">${tt('ข้อมูลฮีโร่','Hero')}${S.pts>0?' •':''}</button><button class="${tab==='skills'?'on':''}" data-act="hrtab" data-v="skills">${tt('สกิล','Skills')}${S.sp>0&&SKILLS[S.cls].some(s=>S.lv>=s.unlock&&S.skills[s.id]<5)?' •':''}</button><button class="${tab==='bag'?'on':''}" data-act="hrtab" data-v="bag">${tt('กระเป๋า','Bag')} ${S.inv.length}/${BAGMAX}</button></div>`;
+  return seg+(tab==='skills'?vSkills():tab==='bag'?vBag():vHeroInfo());
+}
+function vHeroInfo(){
   const h=curStats(),C=CLASSES[S.cls],cap=S.lv>=LVCAP,bd=badges();const shown=S.title&&bd.some(b=>b.on&&b.t===S.title)?S.title:(bd.find(b=>b.on)||{}).t;
   return `
   <section class="win stack"><h2 class="wt">${tt('ผู้กล้า','Hero')}</h2>
@@ -1193,45 +1275,67 @@ function vHero(){
     <div class="slots">${SLOTK.map(k=>{const it=eqItem(k);return it?`<button class="slot" data-act="item" data-id="${it.id}" style="border-color:${rarColor(it.rar)}">${it.up?`<span class="up">+${it.up}</span>`:''}${itemIcon(it,40)}<small>${N(SLOTS[k].n)}</small></button>`:`<button class="slot" data-act="bagslot" data-v="${k}">${ico(SLOTS[k].ic,26,{K:'#3d4aa8',V:'#3d4aa8',W:'#3d4aa8',Y:'#3d4aa8'})}<small>${N(SLOTS[k].n)}</small></button>`}).join('')}</div>
     <p class="tiny muted">${tt('ใส่ชิ้นต่างเซ็ตผสมกันได้ ทุกชิ้นแสดงบนตัวละคร แตะเพื่อเทียบค่าและลองใส่','Mix pieces from any set; all show on your hero. Tap to compare and try on.')}</p>
   </section>
-  <section class="win"><h2 class="wt">${tt('สกิล','Skills')}</h2><span class="wt r">SP <b class="num" style="color:var(--gold)">${S.sp}</b></span>
-    ${SKILLS[S.cls].map(sk=>{const lv=S.skills[sk.id],lock=S.lv<sk.unlock,v=l=>sk.mult+sk.per*(Math.max(1,l)-1);return `<div class="skill"><div style="min-width:0"><b>${N(sk.name)}</b><span class="pips">${[1,2,3,4,5].map(i=>`<i class="${i<=lv?'on':''}"></i>`).join('')}</span>
-      <div class="tiny muted" style="margin-top:3px">${sk.d(v(lv||1))}</div><div class="tiny">MP ${sk.kind==='mana'?sk.mp+'+':sk.mp} · ${sk.range?tt(`ระยะ ${sk.range}`,`Range ${sk.range}`):tt('ตัวเอง','Self')}</div></div>
-      ${lock?`<span class="tag d">Lv${sk.unlock}</span>`:lv>=5?'<span class="tag y">MAX</span>':`<button class="btn sm" data-act="learn" data-v="${sk.id}" ${S.sp<1?'disabled':''}>${lv?tt('อัพ','Up'):tt('เรียน','Learn')} · 1 SP</button>`}</div>`}).join('')}
-  </section>
   <section class="win stack"><h2 class="wt">${tt('ฉายา','Titles')}</h2>
     <div class="badges">${bd.map(b=>b.on?`<button class="badge on" data-act="title" data-v="${esc(b.t)}" aria-pressed="${b.t===shown}">${b.t===shown?'▶ ':''}${esc(b.t)}</button>`:`<span class="badge">${esc(b.t)}</span>`).join('')}</div>
   </section>`;
 }
+function vSkills(){
+  return `  <section class="win"><h2 class="wt">${tt('สกิล','Skills')}</h2><span class="wt r">SP <b class="num" style="color:var(--gold)">${S.sp}</b></span>
+    ${SKILLS[S.cls].map(sk=>{const lv=S.skills[sk.id],lock=S.lv<sk.unlock,v=l=>sk.mult+sk.per*(Math.max(1,l)-1);return `<div class="skill"><div style="min-width:0"><b>${N(sk.name)}</b><span class="pips">${[1,2,3,4,5].map(i=>`<i class="${i<=lv?'on':''}"></i>`).join('')}</span>
+      <div class="tiny muted" style="margin-top:3px">${sk.d(v(lv||1))}</div><div class="tiny">MP ${sk.kind==='mana'?sk.mp+'+':sk.mp} · ${sk.range?tt(`ระยะ ${sk.range}`,`Range ${sk.range}`):tt('ตัวเอง','Self')}</div></div>
+      ${lock?`<span class="tag d">Lv${sk.unlock}</span>`:lv>=5?'<span class="tag y">MAX</span>':`<button class="btn sm" data-act="learn" data-v="${sk.id}" ${S.sp<1?'disabled':''}>${lv?tt('อัพ','Up'):tt('เรียน','Learn')} · 1 SP</button>`}</div>`}).join('')}
+  </section>`;
+}
 function vBag(){
   const f=ui.bagF;const inv=[...S.inv].filter(i=>f==='all'||i.slot===f).sort((a,b)=>b.lv-a.lv||b.rar-a.rar||b.up-a.up||b.id-a.id);const eqIds=Object.values(S.eq);
-  const df=ui.dexF;const dl=dexList();const dex=dl.filter(d=>df==='all'||d.slot===df);const owned=dl.filter(d=>S.dex[d.key]).length;
   const segs=(cur,act)=>`<div class="seg sm"><button class="${cur==='all'?'on':''}" data-act="${act}" data-v="all">${tt('ทั้งหมด','All')}</button>${SLOTK.map(k=>`<button class="${cur===k?'on':''}" data-act="${act}" data-v="${k}">${N(SLOTS[k].n)}</button>`).join('')}</div>`;
+  const sv=ui.salv,svG=sv?S.inv.filter(i=>sv.includes(i.id)).reduce((a,i)=>a+salvVal(i),0):0,full=S.inv.length>=BAGMAX;
+  const dupes=S.inv.filter(i=>!eqIds.includes(i.id)&&S.inv.some(j=>j!==i&&j.slot===i.slot&&j.lv===i.lv&&j.sty===i.sty&&(j.cls||'')===(i.cls||'')&&(j.rar>i.rar||(j.rar===i.rar&&(j.up>i.up||(j.up===i.up&&j.id<i.id))))));
   return `
   <section class="win stack"><h2 class="wt">${tt('คลังของ','Resources')}</h2>
-    <div class="res"><div>${ico('crystal',22)}<b class="num">${S.crystals}</b></div><div>${ico('ticket',22)}<b class="num">${S.tickets}</b></div><div>${ico('chest',22)}<b class="num">${S.chests}</b></div><div>${ico('potion',22)}<b class="num">${S.potions}</b></div></div>
-    <button class="btn" data-act="chest" ${S.chests<1?'disabled':''}>${ico('chest',18)} ${tt('เปิดหีบสมบัติ','Open a chest')}</button>
+    <div class="res"><div>${ico('crystal',22)}<b class="num">${S.crystals}</b></div><div>${ico('ticket',22)}<b class="num">${S.tickets}</b></div><div>${ico('gacha',22)}<b class="num">${S.sbox}</b></div><div>${ico('potion',22)}<b class="num">${S.potions}</b></div></div>
+    <div class="row">${S.sbox>0?`<button class="btn" data-act="sbox">${ico('gacha',18)} ${tt('เปิดกล่องจุ่มพิเศษ','Open special box')}</button>`:''}${S.chests>0?`<button class="btn ghost" data-act="chest">${ico('chest',18)} ${tt('เปิดหีบ','Open chest')} ×${S.chests}</button>`:''}<button class="btn ghost" data-act="buypot" ${S.crystals<POTION_C?'disabled':''}>${ico('potion',18)} ${tt('ซื้อยา','Buy potion')} · ${ico('crystal',14)}${POTION_C}</button></div>
   </section>
-  <section class="win stack"><h2 class="wt">${tt('กล่องจุ่ม','Gacha')}</h2><span class="wt r">${ico('ticket',14)} ${S.tickets}</span>
+  <section class="win stack"><h2 class="wt">${tt('กล่องจุ่ม','Gacha')}</h2><span class="wt r">${ico('ticket',14)} ${S.tickets} · ${ico('crystal',14)} ${S.crystals}</span>
     <div class="row" style="flex-wrap:nowrap;align-items:flex-start"><div style="background:var(--win-lo);border:3px solid var(--win-hl);padding:6px;flex:none">${ico('gacha',72)}</div>
       <div class="stack" style="gap:8px;min-width:0;flex:1"><div class="rates">${RARITY.map(r=>`<span style="color:${r.v}">${N(r.n)} ${r.p}%</span>`).join('')}</div>
       <div class="stack" style="gap:3px"><div class="spread tiny"><span>${tt('การันตี Special+','Special+ pity')}</span><span class="num" style="font-size:18px">${S.pity}/${GACHA.pity}</span></div><div class="bar thin"><i style="--c:var(--r-s);width:${S.pity/GACHA.pity*100}%"></i></div></div></div></div>
-    <p class="tiny muted">${tt(`ได้ของเลเวลไม่เกิน Lv${Math.min(10,S.lv%2?S.lv+1:Math.max(2,S.lv))} · Advance +1 ค่า · Special +2 · Artifact +3 · Legendary +4`,`Gear up to Lv${Math.min(10,S.lv%2?S.lv+1:Math.max(2,S.lv))} · Advance +1 stat · Special +2 · Artifact +3 · Legendary +4`)}</p>
-    <div class="row"><button class="btn" data-act="pull" data-v="1" ${S.tickets>=GACHA.one?'':'disabled'}>${tt('จุ่ม 1','Pull 1')} · ${ico('ticket',16)}1</button><button class="btn" data-act="pull" data-v="10" ${S.tickets>=GACHA.ten?'':'disabled'}>${tt('จุ่ม 10','Pull 10')} · ${ico('ticket',16)}10</button></div>
-    <p class="note">${tt(`ใช้ตั๋วเท่านั้น ตั๋วได้จากการทำเควสประจำวันครบ 5 เควส (วันละ 1 ใบ) · มีอยู่ ${S.tickets} ใบ`,`Tickets only. Earn 1 per day by finishing all 5 daily quests · You have ${S.tickets}`)}</p>
+    <p class="tiny muted">${tt(`ได้ของเลเวลไม่เกิน Lv${Math.min(10,S.lv%2?S.lv+1:Math.max(2,S.lv))} · Advance +1 ค่า · Special +2 · Artifact +3 · Legendary +4 · ได้ของซ้ำได้`,`Gear up to Lv${Math.min(10,S.lv%2?S.lv+1:Math.max(2,S.lv))} · Advance +1 stat · Special +2 · Artifact +3 · Legendary +4 · duplicates possible`)}</p>
+    <div class="gbtns"><button class="btn" data-act="pull" data-v="1" data-by="c" ${S.crystals>=GACHA_C?'':'disabled'}>${tt('จุ่ม 1','Pull 1')} · ${ico('crystal',16)}${GACHA_C}</button><button class="btn" data-act="pull" data-v="1" data-by="t" ${S.tickets>=GACHA.one?'':'disabled'}>${tt('จุ่ม 1','Pull 1')} · ${ico('ticket',16)}1</button><button class="btn" data-act="pull" data-v="10" data-by="t" ${S.tickets>=GACHA.ten?'':'disabled'}>${tt('จุ่ม 10','Pull 10')} · ${ico('ticket',16)}10</button></div>
+    <p class="note">${tt(`จุ่มด้วยผลึก ${GACHA_C} หรือตั๋ว 1 ใบ · ตั๋วได้จากทำภารกิจประจำวันครบ 5 (วันละ 1 ใบ)`,`Pull with ${GACHA_C} crystals or 1 ticket · earn a ticket a day by finishing all 5 daily quests`)}</p>
   </section>
-  <section class="win stack"><h2 class="wt">${tt('ไอเทม','Items')}</h2><span class="wt r">${S.inv.length}</span>
+  <section class="win stack"><h2 class="wt">${tt('ไอเทม','Items')}</h2><span class="wt r ${full?'badmsg':''}">${S.inv.length}/${BAGMAX}</span>
+    ${full?`<p class="tiny badmsg">${tt('กระเป๋าเต็ม ของที่ได้ใหม่จะถูกแยกเป็นผลึกอัตโนมัติ แยกของที่ไม่ใช้ออกก่อน','Bag full: new items are auto-dismantled into crystals. Dismantle what you don’t use.')}</p>`:''}
     ${segs(f,'bagf')}
-    <div class="items">${inv.map(it=>{const cur=eqItem(it.slot),on=eqIds.includes(it.id),better=!on&&canWear(it)&&(!cur||power(it)>power(cur));return `<button class="item" data-act="item" data-id="${it.id}" aria-label="${esc(itemName(it))}">${itemIcon(it,64,it.up>=10?'p10':'')}${better?'<span class="better">▲</span>':''}${it.up?`<span class="up">+${it.up}</span>`:''}${on?`<span class="eqm">${tt('ใส่อยู่','ON')}</span>`:!canWear(it)?`<span class="lock">Lv${reqLv(it.lv)}</span>`:''}</button>`}).join('')||`<p class="muted tiny">${tt('ยังไม่มีไอเทมหมวดนี้','Nothing here yet')}</p>`}</div>
-    <p class="tiny muted">${tt('▲ = ค่าดีกว่าชิ้นที่ใส่อยู่ · ป้ายแดง = เลเวลยังไม่ถึง','▲ = better than equipped · red tag = level too low')}</p>
-  </section>
-  <section class="win stack"><h2 class="wt">${tt('สมุดภาพไอเทม','Collection')}</h2><span class="wt r">${owned}/${dl.length}</span>
-    ${segs(df,'dexf')}
-    <p class="tiny muted">${tt('ชิ้นที่ยังไม่ปลดล็อกจะเป็นเงาดำ','Locked items show as silhouettes')}</p>
-    <div class="items">${dex.map(d=>{const has=S.dex[d.key];return `<button class="item ${has?'':'unk'}" data-act="dex" data-v="${d.key}" aria-label="${has?esc(itemName(d)):'?'}">${pimg(iconURL(d,has?0:null),64,64)}</button>`}).join('')}</div>
+    ${sv?`<div class="salvbar"><span>${tt(`เลือก ${sv.length} ชิ้น · ได้`,`${sv.length} selected ·`)} ${ico('crystal',14)}<b class="num">${svG}</b></span><div class="row"><button class="btn sm ghost" data-act="salvnorm">${tt('เลือก Normal ที่ไม่ได้ใส่','Pick unworn Normals')}</button><button class="btn sm ghost" data-act="salvdupe" ${dupes.length?'':'disabled'}>${tt(`เลือกของซ้ำ (${dupes.length})`,`Pick duplicates (${dupes.length})`)}</button></div><div class="row"><button class="btn sm ghost backbtn" data-act="salvmode">← ${tt('ยกเลิก','Cancel')}</button><button class="btn sm red" data-act="salvgo" ${sv.length?'':'disabled'}>${tt(`แยก ${sv.length} ชิ้น`,`Dismantle ${sv.length}`)}</button></div></div>`:`<button class="btn sm ghost" data-act="salvmode">${tt('โหมดแยกของ (เลือกหลายชิ้น)','Dismantle mode (pick several)')}</button>`}
+    <div class="items">${inv.map(it=>{const cur=eqItem(it.slot),on=eqIds.includes(it.id),better=!on&&canWear(it)&&(!cur||power(it)>power(cur)),pk=sv&&sv.includes(it.id);return `<button class="item ${pk?'pk':''} ${sv&&on?'unk':''}" data-act="${sv?'salvpick':'item'}" data-id="${it.id}" aria-label="${esc(itemName(it))}" ${sv?`aria-pressed="${!!pk}"`:''}>${itemIcon(it,64,it.up>=10?'p10':'')}${better&&!sv?'<span class="better">▲</span>':''}${pk?'<span class="better">✓</span>':''}${it.up?`<span class="up">+${it.up}</span>`:''}${on?`<span class="eqm">${tt('ใส่อยู่','ON')}</span>`:!canWear(it)?`<span class="lock">Lv${reqLv(it.lv)}</span>`:''}</button>`}).join('')||`<p class="muted tiny">${tt('ยังไม่มีไอเทมหมวดนี้','Nothing here yet')}</p>`}</div>
+    <p class="tiny muted">${sv?tt('แตะเพื่อเลือก/ไม่เลือก ชิ้นที่ใส่อยู่แยกไม่ได้','Tap to select; equipped items can’t be dismantled'):tt('▲ = ค่าดีกว่าชิ้นที่ใส่อยู่ · ป้ายแดง = เลเวลยังไม่ถึง · ได้ของซ้ำได้ ไม่ใช้ก็แยกเป็นผลึก','▲ = better than equipped · red tag = level too low · duplicates happen; dismantle spares for crystals')}</p>
   </section>`;
 }
-function vStats(){
-  bump('stats');save();
+function dayCell(k,act){const t=today(),dt=pd(k),c=S.closes[k],sh=S.shieldUsed[k],ns=S.nospend[k];const out=S.entries.reduce((a,e)=>a+(e.type==='out'&&e.date===k?e.amt:0),0);
+  return `<button class="dc ${c?'ok':''} ${sh?'sh':''} ${k===t?'td':''} ${k<S.created||k>t?'pre':''} ${ui.calSel===k?'sel':''}" data-act="${act}" data-v="${k}" aria-label="${fmtD(k)}"><b>${dt.getDate()}</b>${c?ico('flame',14):sh?ico('shield',14):'<i class="dot"></i>'}<small class="${ns?'ns':''}">${ns?tt('ไม่จ่าย','none'):out?kfmt(out):k<=t&&k>=S.created?'0':''}</small></button>`}
+function checkHTML(){
+  const t=today(),st=streak(),done=!!S.closes[t],ws=weekStart(t);const head=[1,2,3,4,5,6,0].map(i=>`<span>${WD(i)}</span>`).join('');
+  let cal=`<div class="calh">${head}</div><div class="calg">${Array.from({length:7},(_,i)=>dayCell(addDays(ws,i),'calday')).join('')}</div>`;
+  if(ui.calOpen){const m=ui.calM||t.slice(0,7),first=m+'-01',d0=pd(first),dim=new Date(d0.getFullYear(),d0.getMonth()+1,0).getDate(),padN=(d0.getDay()+6)%7;
+    const X=sumRange(first,m+'-'+pad(dim)),prev=dkey(new Date(d0.getFullYear(),d0.getMonth()-1,1)).slice(0,7),next=dkey(new Date(d0.getFullYear(),d0.getMonth()+1,1)).slice(0,7);
+    cal=`<div class="spread"><button class="btn sm ghost" data-act="calm" data-v="${prev}" aria-label="prev">◀</button><b>${MO(d0.getMonth())} ${d0.getFullYear()+(LANG==='th'?543:0)}</b><button class="btn sm ghost" data-act="calm" data-v="${next}" ${next>t.slice(0,7)?'disabled':''} aria-label="next">▶</button></div>
+      <div class="calh">${head}</div><div class="calg">${'<span></span>'.repeat(padN)}${Array.from({length:dim},(_,i)=>dayCell(m+'-'+pad(i+1),'calday')).join('')}</div>
+      <div class="spread tiny"><span>${tt('รับ','In')} <b style="color:var(--exp)">${baht(X.inc)}</b></span><span>${tt('จ่าย','Out')} <b style="color:var(--hp)">${baht(X.out)}</b></span><span>${tt('คงเหลือ','Net')} <b>${baht(X.inc-X.out)}</b></span></div>`}
+  const sel=ui.calSel,selE=sel?S.entries.filter(e=>e.date===sel).sort((a,b)=>b.id-a.id):[];
+  return `<section class="win stack"><h2 class="wt">Daily Check</h2><span class="wt r">${ico('shield',14)} ${S.shields}/2</span>
+    <div class="spread"><div class="streakbig">${ico('flame',30)}<span class="num">${st}</span><small>${tt('วัน<br>ติดต่อกัน','day<br>streak')}</small></div><p class="tiny muted" style="max-width:26ch">${tt('เข้ามาเช็คบัญชีวันละครั้ง พลังเต็มหลอด + ผลึกเพิ่มตามสตรีค · ครบ 7 วันได้โล่กันสตรีค','Check in once a day: full energy + crystals that grow with your streak · every 7 days earns a streak shield')}</p></div>
+    ${cal}
+    <button class="btn sm ghost" data-act="calopen">${ui.calOpen?tt('▲ ย่อเหลือสัปดาห์นี้','▲ Back to this week'):tt('▼ ขยายดูทั้งเดือน / ปฏิทิน','▼ Month view / calendar')}</button>
+    ${sel?`<div class="stack div" style="gap:4px"><div class="spread"><b>${WD(pd(sel).getDay())} ${fmtD(sel)}</b><button class="btn sm ghost" data-act="calday" data-v="${sel}">✕ ${tt('ปิด','Close')}</button></div>${selE.length?selE.map(entryRow).join(''):`<p class="tiny muted">${S.nospend[sel]?tt('วันไม่จ่าย','No-spend day'):tt('ไม่มีรายการ','No entries')}</p>`}</div>`:`<p class="tiny muted">${tt('แตะวันที่เพื่อดูรายการของวันนั้น','Tap a day to see its entries')}</p>`}
+    ${done?`<p class="okmsg">${tt('เช็คบัญชีวันนี้แล้ว · พรุ่งนี้มาเช็คต่อเพื่อรักษาสตรีค','Checked today · come back tomorrow to keep the streak')}</p>`:`<button class="btn big" data-act="dcheck">${ico('bolt',20)} ${tt(`Daily Check · พลังเต็ม + ผลึก ${checkCrystals(streakAt(addDays(t,-1))+1)}`,`Daily Check · full energy + ${checkCrystals(streakAt(addDays(t,-1))+1)} crystals`)}</button>`}
+  </section>`}
+function questsHTML(){const d=D(),allDone=d.qc.every(Boolean);return `<section class="win"><h2 class="wt">${tt('ภารกิจวันนี้','Daily quests')}</h2><span class="wt r">${d.qc.filter(Boolean).length}/5</span>
+    <div>${d.q.map((q,i)=>{const p=Math.min(qProg(q),q.need);return `<div class="quest"><div class="stack" style="gap:4px"><span>${qText(q)}</span><div class="bar thin"><i style="--c:var(--gold);width:${p/q.need*100}%"></i></div><span class="rw">${ico('bolt',12)}+${QR.e} ${ico('crystal',12)}+${QR.c} EXP+${QR.x}</span></div>${d.qc[i]?`<span class="done-chip">${tt('รับแล้ว','Claimed')}</span>`:`<button class="btn sm" data-act="claim" data-v="${i}" ${p<q.need?'disabled':''}>${p}/${q.need} ${tt('รับ','Claim')}</button>`}</div>`}).join('')}</div>
+    <div class="quest bonus"><div class="stack" style="gap:3px"><b>${tt('ภารกิจที่ 6 · ทำครบ 5 ภารกิจ','Quest 6 · finish all 5')}</b><span class="rw">${ico('ticket',14)} ${tt('ตั๋วจุ่ม 1 ใบ (ได้ทันทีที่ครบ 5)','1 gacha ticket (given when all 5 are done)')}</span><span class="rw">${ico('shirt',14)} ${tt('+ ชุดหรืออาวุธสุ่ม Advance ขึ้นไป','+ random gear, Advance or better')}</span></div>${d.bonus?`<span class="done-chip">${tt('รับแล้ว','Claimed')}</span>`:`<button class="btn sm" data-act="bonus" ${allDone?'':'disabled'}>${tt('รับ','Claim')}</button>`}</div>
+  </section>`}
+function vCheck(){
+  if(!(D().c.stats>0)){bump('stats');save()}
   const t=today(),mode=ui.stats;
   const R=mode==='week'?(()=>{const s=weekStart(t);return{s,e:addDays(s,6),n:7}})():(()=>{const d=pd(t),dim=new Date(d.getFullYear(),d.getMonth()+1,0).getDate(),p=t.slice(0,8);return{s:p+'01',e:p+pad(dim),n:dim}})();
   const X=sumRange(R.s,R.e),net=X.inc-X.out,rate=X.inc>0?net/X.inc:0;
@@ -1247,14 +1351,15 @@ function vStats(){
   const resisted=S.resists.filter(r=>r.date>=R.s&&r.date<=R.e),resAmt=resisted.reduce((a,b)=>a+b.amt,0);
   const ws=weekStart(t),wX=sumRange(ws,addDays(ws,6)),topCat=Object.entries(wX.byCat).sort((a,b)=>b[1]-a[1])[0];
   const pend=Object.entries(S.proph).filter(([k,p])=>k<ws&&!p.done);const cur=S.proph[ws];const base=baseline(ui.duelCat);const prevT=ui.duelAmt?duelTier(parseFloat(ui.duelAmt)||0,base):null;
-  const duelHTML=`${pend.map(([k,p])=>{const r=duelResult(k,p);return `<div class="stack div" style="gap:6px"><b>${tt('ผลสัปดาห์','Week of')} ${fmtD(k)}</b><span class="tiny">${tt('เพดาน','Cap')} ${baht(p.amt)} · ${tt('ใช้จริง','Actual')} ${baht(r.actual)} · ${tt('ปิดบัญชี','Closed')} ${r.closes}/7</span><button class="btn sm" data-act="duelclaim" data-v="${k}">${tt('ดูผลและรับรางวัล','See result')}</button></div>`}).join('')}
+  const duelHTML=`${pend.map(([k,p])=>{const r=duelResult(k,p);return `<div class="stack div" style="gap:6px"><b>${tt('ผลสัปดาห์','Week of')} ${fmtD(k)}</b><span class="tiny">${tt('เพดาน','Cap')} ${baht(p.amt)} · ${tt('ใช้จริง','Actual')} ${baht(r.actual)} · Daily Check ${r.closes}/7</span><button class="btn sm" data-act="duelclaim" data-v="${k}">${tt('ดูผลและรับรางวัล','See result')}</button></div>`}).join('')}
     ${cur?(()=>{const sp=weekSpend(ws,cur.cat),r=sp/cur.amt;return `<div class="duel">${pimg(heroURL(heroLook()),96,96,'shadowimg')}<div class="stack" style="gap:6px;min-width:0"><b>${duelCatN(cur.cat)}</b><span class="tiny">${tt('เพดาน','Cap')} ${baht(cur.amt)} · ${tt('ขั้น','Tier')} <b style="color:var(--gold)">${N(DUELR[cur.tier].n)}</b></span><div class="bar"><i style="--c:${r>1?'var(--hp)':r>.85?'var(--gold)':'var(--exp)'};width:${Math.min(100,r*100)}%"></i></div><span class="tiny muted">${tt('ใช้ไป','Spent')} ${baht(sp)} · ${tt('ตัดสินวันจันทร์หน้า','Judged next Monday')}</span></div></div>`})()
     :duelOpen()?`<div class="stack" style="gap:8px"><select id="duelcat" class="field">${DUELCATS.map(k=>`<option value="${k}" ${ui.duelCat===k?'selected':''}>${duelCatN(k)}</option>`).join('')}</select>
       <p class="tiny">${base!=null?tt(`เงาของคุณใช้ ${baht(base)}/สัปดาห์ · ทอง ≤${baht(base*.8)} · เงิน ≤${baht(base*.95)} · ทองแดง ≤${baht(base*1.1)}`,`Your shadow spends ${baht(base)}/week · Gold ≤${baht(base*.8)} · Silver ≤${baht(base*.95)} · Bronze ≤${baht(base*1.1)}`):tt('ข้อมูลยังไม่ครบ 2 สัปดาห์ รางวัลสูงสุดขั้นทองแดง','Under 2 weeks of data: Bronze max')}</p>
       <div class="row"><input id="duelamt" class="field" style="flex:1" inputmode="decimal" placeholder="${tt('เพดานสัปดาห์นี้ ฿','This week’s cap ฿')}" value="${esc(ui.duelAmt)}"><button class="btn" data-act="duelset">${tt('ท้าดวล','Duel')}</button></div>
       ${prevT!=null&&ui.duelAmt?`<p class="tiny">${prevT?tt(`ได้ขั้น ${N(DUELR[prevT].n)} ถ้าทำได้`,`${N(DUELR[prevT].n)} tier if you make it`):tt('สูงเกินไป ไม่มีรางวัล','Too high, no reward')}</p>`:''}</div>`
     :`<p class="tiny muted">${tt('ตั้งเพดานได้วันจันทร์และอังคาร','Set a cap on Monday or Tuesday')}</p>`}`;
-  return `
+  const hist=[...S.entries].sort((a,b)=>b.date.localeCompare(a.date)||b.id-a.id).slice(0,ui.histN||20);
+  return `${checkHTML()}${questsHTML()}
   <section class="win stack"><h2 class="wt">${tt('สมุดบัญชีผู้กล้า','Ledger book')}</h2>
     <div class="seg"><button class="${mode==='week'?'on':''}" data-act="smode" data-v="week">${tt('สัปดาห์นี้','This week')}</button><button class="${mode==='month'?'on':''}" data-act="smode" data-v="month">${MO(pd(t).getMonth())}</button></div>
     <div class="tiles"><div class="tile2"><small>${tt('รายรับ','Income')}</small><span class="num" style="color:var(--exp)">${baht(X.inc)}</span></div><div class="tile2"><small>${tt('รายจ่าย','Expenses')}</small><span class="num" style="color:var(--hp)">${baht(X.out)}</span></div><div class="tile2"><small>${tt('คงเหลือ','Net')}</small><span class="num">${baht(net)}</span></div><div class="tile2"><small>${tt('อัตราออม','Savings rate')}</small><span class="num" style="color:var(--gold)">${X.inc>0?Math.round(rate*100)+'%':'—'}</span></div></div>
@@ -1269,8 +1374,10 @@ function vStats(){
     <div class="stack div" style="gap:6px"><b class="tiny" style="color:var(--gold)">${tt('รายรับ','Income')}</b>${incRows}</div>
     <div class="spread tiny div">${ico('shield',20)}<span style="flex:1">${tt(`ต้านกิเลสได้ ${resisted.length} ครั้ง`,`${resisted.length} temptations resisted`)}</span><span class="num" style="color:var(--energy)">${baht(resAmt)}</span></div>
   </section>
+  <section class="win"><h2 class="wt">${tt('ประวัติบัญชี','History')}</h2><span class="wt r">${S.entries.length}</span><div>${entryGroups(hist)||`<p class="muted">${tt('ยังไม่มีรายการ ไปจดที่แท็บจดบัญชี','No entries yet. Log one in the Log tab.')}</p>`}</div>
+    ${S.entries.length>hist.length?`<button class="btn sm ghost" style="margin-top:10px" data-act="histmore">${tt('ดูเพิ่ม','Show more')}</button>`:''}</section>
   <section class="win stack"><h2 class="wt">${tt('ศึกเงาตัวเอง','Shadow duel')}</h2>
-    <p class="tiny muted">${tt('ดวลกับค่าเฉลี่ยของตัวเองในอดีต ไม่ใช่รายได้ใคร ต้องปิดบัญชี 5 วัน ขั้นทองต้องตรวจบัญชีผ่าน','Duel your own past average, not anyone’s income. Needs 5 closed days; Gold needs a passed check.')}</p>${duelHTML}
+    <p class="tiny muted">${tt('ดวลกับค่าเฉลี่ยของตัวเองในอดีต ไม่ใช่รายได้ใคร ต้อง Daily Check 5 วัน ขั้นทองต้องตรวจบัญชีผ่าน','Duel your own past average, not anyone’s income. Needs 5 Daily Checks; Gold needs a passed check.')}</p>${duelHTML}
   </section>
   <section class="win stack"><h2 class="wt">${tt('ตรวจบัญชี','Balance check')}</h2><span class="wt r">+15/${tt('สัปดาห์','week')}</span>
     ${S.opening==null?`<p class="tiny muted">${tt('ตั้งยอดเงินตั้งต้น (เงินสด + ทุกบัญชี)','Set your starting balance (cash + all accounts)')}</p><div class="row"><input id="openv" class="field" style="flex:1" inputmode="decimal" placeholder="฿"><button class="btn" data-act="setopen">${tt('ตั้งยอด','Set')}</button></div>`:
@@ -1285,13 +1392,14 @@ function openCodex(){
   const ov=$('#ov');ov.hidden=false;const code=S?exportCode():'';
   ov.innerHTML=`<div class="win" role="dialog"><h2 class="wt">${tt('คู่มือ','Guide')}</h2>
   <div class="codex">
-    <div><h3>${tt('หลักของเกม','Core idea')}</h3><p>${tt('พลัง EXP และไอเทม มาจากพฤติกรรม (จด ปิดบัญชี เควส ต้านกิเลส) ไม่ใช่จากยอดเงิน ใช้เงินมากขึ้นไม่ได้พลังมากขึ้น ยอดออมให้แค่ตราเกียรติยศ','Energy, EXP and items come from habits (logging, closing, quests, resisting), never from amounts. Spending more earns nothing extra; savings only earn honor titles.')}</p></div>
+    <div><h3>${tt('หลักของเกม','Core idea')}</h3><p>${tt('พลัง EXP และไอเทม มาจากพฤติกรรม (จด Daily Check ภารกิจ ต้านกิเลส) ไม่ใช่จากยอดเงิน ใช้เงินมากขึ้นไม่ได้อะไรเพิ่ม ยอดออมให้แค่ตราเกียรติยศ','Energy, EXP and items come from habits (logging, Daily Check, quests, resisting), never from amounts. Spending more earns nothing extra; savings only earn honor titles.')}</p></div>
     <div><h3>${tt('แหล่งพลัง','Energy sources')}</h3><div class="tblwrap"><table>
       <tr><th>${tt('การกระทำ','Action')}</th><th>${tt('รางวัล','Reward')}</th><th>${tt('เพดาน','Limit')}</th></tr>
-      <tr><td>${tt('จดรายการ','Log an entry')}</td><td class="e">+40</td><td>${tt('3 ครั้ง/วัน + การ์ด','3/day + a card')}</td></tr>
-      <tr><td>${tt(`ยืนยันวันไม่จ่าย (หลัง ${NOSPEND_HOUR}:00)`,`No-spend day (after ${NOSPEND_HOUR}:00)`)}</td><td class="e">+40×3</td><td>${tt('ใช้ช่องเดียวกับการจด + การ์ด 3 ใบ','Shares the 3 log slots + 3 cards')}</td></tr>
-      <tr><td>${tt('เควสประจำวัน','Daily quests')}</td><td class="e">+12</td><td>${tt('5 เควส · ครบได้ตั๋วจุ่ม 1 ใบ + เควสที่ 6 ได้ชุด/อาวุธ','5 quests · all done = 1 gacha ticket + quest 6 gear')}</td></tr>
-      <tr><td>${tt('ปิดบัญชี','Daily close')}</td><td class="e">+15–30</td><td>${tt('หีบใหญ่ขึ้นตามสตรีค','Chest grows with streak')}</td></tr>
+      <tr><td>Daily Check</td><td class="e">${tt('เต็มหลอด','Full')}</td><td>${tt('วันละครั้ง + ผลึก 6–20 ตามสตรีค','Once a day + 6–20 crystals by streak')}</td></tr>
+      <tr><td>${tt('ฟื้นเองตามเวลา','Over time')}</td><td class="e">+${ENERGY_H}</td><td>${tt('ทุก 1 ชั่วโมง','Every hour')}</td></tr>
+      <tr><td>${tt('จดรายการ','Log an entry')}</td><td class="e">${tt('การ์ด','Card')}</td><td>${tt('สุ่มผลึก/ไอเทม/พลัง 3 ใบต่อวัน','Crystals/item/energy, 3 a day')}</td></tr>
+      <tr><td>${tt(`ยืนยันวันไม่จ่าย (หลัง ${NOSPEND_HOUR}:00)`,`No-spend day (after ${NOSPEND_HOUR}:00)`)}</td><td class="e">${tt('การ์ด','Cards')}</td><td>${tt('ได้ครบ 3 ใบของวัน (นับรวมที่จดไปแล้ว)','Fills today’s 3 draws (earlier logs count)')}</td></tr>
+      <tr><td>${tt('ภารกิจประจำวัน','Daily quests')}</td><td class="e">+12</td><td>${tt('5 ภารกิจ · ครบได้ตั๋วจุ่ม 1 ใบ + ภารกิจที่ 6 ได้ชุด/อาวุธ','5 quests · all done = 1 gacha ticket + quest 6 gear')}</td></tr>
       <tr><td>${tt('ต้านกิเลส','Resist')}</td><td class="e">+10</td><td>${tt('2 ครั้ง/วัน','2/day')}</td></tr>
       <tr><td>${tt('ตรวจบัญชี / ทบทวน / ศึกเงา','Check / review / duel')}</td><td class="e">+15–40</td><td>${tt('สัปดาห์ละครั้ง','Weekly')}</td></tr>
     </table></div></div>
@@ -1300,11 +1408,15 @@ function openCodex(){
       <li>${tt('ชุดมี 5 ระดับ (Lv2/4/6/8/10) ระดับละ 2 สไตล์ แยก หัว/ตัว/แขน/ขา ใส่ผสมต่างเซ็ตได้','Armor comes in Lv2/4/6/8/10, two styles each, split into head/body/arms/legs; mix freely')}</li>
       <li>${tt('ความหายากสุ่มทุกครั้ง: Normal 60% · Advance 25% (+1 ค่า) · Special 10% (+2) · Artifact 4% (+3) · Legendary 1% (+4)','Rarity is rolled every drop: Normal 60% · Advance 25% (+1 stat) · Special 10% (+2) · Artifact 4% (+3) · Legendary 1% (+4)')}</li>
       <li>${tt('ใส่ได้เมื่อเลเวลถึง (ชุด Lv2 ใส่ได้ตั้งแต่ Lv1)','Wear once your level matches (Lv2 gear from Lv1)')}</li>
-      <li>${tt('ชนะมอน: โอกาสได้ไอเทม 20% สูงสุด Special · มังกรฟอโม่: ดรอปแน่นอน สุ่มเหมือนกล่องจุ่ม · กล่องจุ่มใช้ตั๋วเท่านั้น','Monster wins: 20% item chance, max Special · FOMO Dragon: guaranteed drop with gacha odds · Gacha uses tickets only')}</li>
+      <li>${tt(`ชนะมอน: โอกาสได้ไอเทม 20% สูงสุด Special · มังกรฟอโม่: ดรอปแน่นอน สุ่มเหมือนกล่องจุ่ม · กล่องจุ่ม: ผลึก ${GACHA_C} หรือตั๋ว 1 ใบ`,`Monster wins: 20% item chance, max Special · FOMO Dragon: guaranteed drop with gacha odds · Gacha: ${GACHA_C} crystals or 1 ticket`)}</li>
+      <li>${tt(`ได้ของซ้ำได้ กระเป๋าจุ ${BAGMAX} ชิ้น เต็มแล้วของใหม่แยกเป็นผลึกอัตโนมัติ ใช้โหมดแยกของเพื่อแยกทีละหลายชิ้น`,`Duplicates happen. The bag holds ${BAGMAX}; when full, new items become crystals. Use dismantle mode to clear several at once`)}</li></ul></div>
+    <div><h3>${tt('หอคอย','Tower')}</h3><ul>
+      <li>${tt('30 ชั้น ชั้นละ 2–3 ตัวสู้ต่อเนื่อง เลือดไม่ฟื้นระหว่างตัว ผ่านชั้นฟื้น 25%','30 floors, 2–3 foes in a row with no healing between them; clearing a floor restores 25% HP')}</li>
+      <li>${tt('เคลียแล้วเซฟไว้ รีเซ็ตทุกต้นเดือน · ชั้น 10/20/30 ได้กล่องจุ่มพิเศษ · ชั้น 30 บอสมังกรฟอโม่ร่างคลั่ง ได้ Legendary','Progress saves and resets each month · floors 10/20/30 give a special box · floor 30 boss drops a Legendary')}</li>
     </ul></div>
-    <div><h3>${tt('เลือด','HP')}</h3><p>${tt('เลือดไม่รีเซ็ตหลังสู้ ฟื้น 10% ของเลือดสูงสุดทุก 1 นาที (+0.5% ต่อ VIT) เลเวลอัปเลือดเต็ม ยาฟื้นฟูเติม 50%','HP carries over and heals 10% of max per minute (+0.5% per VIT). Level-ups fully heal. Potions restore 50%.')}</p></div>
+    <div><h3>${tt('เลือด','HP')}</h3><p>${tt(`เลือดไม่รีเซ็ตหลังสู้ ฟื้น 10% ของเลือดสูงสุดทุก 1 นาที (+0.5% ต่อ VIT) เลเวลอัปเลือดเต็ม ยาฟื้นฟูเติม 50% ซื้อได้ที่กระเป๋า ${POTION_C} ผลึก`,`HP carries over and heals 10% of max per minute (+0.5% per VIT). Level-ups fully heal. Potions restore 50% and cost ${POTION_C} crystals in the bag.`)}</p></div>
     <div><h3>${tt('กันโกงโดยไม่เชื่อมธนาคาร','Honesty without bank links')}</h3><ol>
-      <li>${tt('รางวัลไม่ขึ้นกับยอดเงิน และจำกัด 3 ครั้ง/วัน วันไม่จ่ายได้เท่ากัน','Rewards ignore amounts and cap at 3/day; no-spend days earn the same')}</li>
+      <li>${tt('รางวัลไม่ขึ้นกับยอดเงิน การ์ดจำกัด 3 ใบ/วัน วันไม่จ่ายได้เท่ากัน','Rewards ignore amounts; cards cap at 3 a day; no-spend days earn the same')}</li>
       <li>${tt('ตรวจบัญชีรายสัปดาห์: ยอดที่คาดไว้ซ่อนจนกว่าจะกรอกเงินจริง','Weekly check: the expected figure stays hidden until you enter real money')}</li>
       <li>${tt('ศึกเงาเทียบกับค่าเฉลี่ยตัวเอง จดต่ำกว่าจริง เงาสัปดาห์หน้าจะโหดขึ้นเอง','The shadow duel uses your own average; under-reporting makes next week harder')}</li>
     </ol></div>
@@ -1331,12 +1443,16 @@ function render(){
   hud();if(!READY)return;nav();const app=$('#app');
   if(!S){app.classList.add('solo');app.innerHTML=vCreate();return}
   app.classList.remove('solo');
-  app.innerHTML={ledger:vLedger,hunt:vHunt,hero:vHero,bag:vBag,stats:vStats}[ui.view]();
+  if(!{log:1,check:1,hunt:1,hero:1}[ui.view])ui.view='log';
+  app.innerHTML={log:vLog,check:vCheck,hunt:vHunt,hero:vHero}[ui.view]();
 }
+new MutationObserver(()=>{const ov=$('#ov');if(ov.hidden)return;const w=ov.querySelector('.win');const can=w&&!w.hasAttribute('data-noclose');const x=ov.querySelector('.ovx');if(can&&!x){const bt=document.createElement('button');bt.className='ovx';bt.dataset.act='closeov';bt.textContent='✕ '+tt('ปิด','Close');ov.appendChild(bt)}else if(!can&&x)x.remove()}).observe(document.getElementById('ov'),{childList:true});
+document.getElementById('ov').addEventListener('click',e=>{const ov=$('#ov');if(e.target===ov&&!ui.cq&&ov.querySelector('.ovx'))closeOv()});
 function closeOv(){const ov=$('#ov');ov.hidden=true;ov.innerHTML='';ui.delArm=false;ui.impArm=false;render()}
 document.addEventListener('click',ev=>{
   const b=ev.target.closest('[data-act]');if(!b||b.disabled)return;
   const a=b.dataset.act,v=b.dataset.v,id=+b.dataset.id;
+  if(a!=='snd'&&a!=='pick'&&a!=='save')sfx('click');
   if(a!=='statreset')ui.resetArm=false;
   switch(a){
     case 'lang':LANG=LANG==='th'?'en':'th';try{localStorage.setItem('ier-lang',LANG)}catch(e){}if(S){S.lang=LANG;save()}if(!$('#ov').hidden)closeOv();else render();if(B.sim&&!$('#battle').hidden)updBattle();break;
@@ -1347,8 +1463,23 @@ document.addEventListener('click',ev=>{
     case 'crskin':cr.skin=+v;cr.arm=false;render();break;
     case 'crattack':previewAttack();break;
     case 'create':createChar();break;
-    case 'view':ui.view=v;render();window.scrollTo(0,0);break;
-    case 'bagslot':ui.view='bag';ui.bagF=v;render();window.scrollTo(0,0);break;
+    case 'view':ui.view=v;ui.salv=null;render();window.scrollTo(0,0);break;
+    case 'bagslot':ui.view='hero';ui.heroTab='bag';ui.bagF=v;render();window.scrollTo(0,0);break;
+    case 'htab':ui.huntTab=v;render();break;
+    case 'hrtab':ui.heroTab=v;ui.salv=null;render();break;
+    case 'calopen':ui.calOpen=!ui.calOpen;ui.calM=null;render();break;
+    case 'calm':ui.calM=v;render();break;
+    case 'calday':ui.calSel=ui.calSel===v?null:v;render();break;
+    case 'dcheck':dailyCheck();break;
+    case 'histmore':ui.histN=(ui.histN||20)+30;render();break;
+    case 'sbox':openSBox();break;
+    case 'buypot':buyPotion();break;
+    case 'salvmode':ui.salv=ui.salv?null:[];render();break;
+    case 'salvpick':{if(!ui.salv)return;if(Object.values(S.eq).includes(id)){toast(tt('ชิ้นที่ใส่อยู่แยกไม่ได้','Equipped items can’t be dismantled'),'bad');return}const i=ui.salv.indexOf(id);if(i>=0)ui.salv.splice(i,1);else ui.salv.push(id);render();break}
+    case 'salvnorm':{const eqIds=Object.values(S.eq);ui.salv=[...new Set([...(ui.salv||[]),...S.inv.filter(i=>i.rar===0&&!i.up&&!eqIds.includes(i.id)).map(i=>i.id)])];render();break}
+    case 'salvdupe':{const eqIds=Object.values(S.eq);const d=S.inv.filter(i=>!eqIds.includes(i.id)&&S.inv.some(j=>j!==i&&j.slot===i.slot&&j.lv===i.lv&&j.sty===i.sty&&(j.cls||'')===(i.cls||'')&&(j.rar>i.rar||(j.rar===i.rar&&(j.up>i.up||(j.up===i.up&&j.id<i.id))))));ui.salv=[...new Set([...(ui.salv||[]),...d.map(i=>i.id)])];render();break}
+    case 'salvgo':salvSelected();break;
+    case 'snd':SND.on=!SND.on;try{localStorage.setItem('ier-sound',SND.on?'1':'0')}catch(e){}if(SND.on)sfx('click',true);hud();break;
     case 'codex':openCodex();break;
     case 'closeov':closeOv();break;
     case 'ltype':ui.type=v;render();break;
@@ -1360,8 +1491,6 @@ document.addEventListener('click',ev=>{
     case 'cardnext':cardNext();break;
     case 'del':S.entries=S.entries.filter(e=>e.id!==id);save();render();toast(tt('ลบแล้ว รางวัลที่รับไปไม่คืนช่อง','Deleted; used reward slots stay used'));break;
     case 'resist':doResist();break;
-    case 'closeprep':closePrep(v);break;
-    case 'closeday':closeDay(v);break;
     case 'nospend':if($('#nscheck')&&$('#nscheck').checked)confirmNoSpend();break;
     case 'claim':claimQuest(+v);break;
     case 'bonus':claimBonus();break;
@@ -1377,22 +1506,22 @@ document.addEventListener('click',ev=>{
     case 'bspeed':S.speed=S.speed>=3?1:(S.speed||1)+1;save();$('#battle').style.setProperty('--spd',S.speed);updBattle();break;
     case 'brepeat':S.repeat=!S.repeat;save();updBattle();break;
     case 'bclose':closeBattle();break;
-    case 'bagain':startBattle(B.mon.id);break;
+    case 'bagain':againBattle();break;
+    case 'tower':startTower();break;
+    case 'bexit':if(!B.sim)return;if(B.done){closeBattle();return}if(!B.exitArm){B.exitArm=true;b.textContent=tt('แตะอีกครั้งเพื่อหนี (ไม่คืนพลัง)','Tap again to flee (no refund)');setTimeout(()=>{if(B.exitArm&&!B.done&&$('#bexit')){B.exitArm=false;$('#bexit').innerHTML=`← ${tt('ออกจากการต่อสู้','Leave battle')}`}},3000);return}B.sim.over=true;B.sim.fled=true;if(B.resolve&&!B.busy)B.resolve();break;
     case 'bstop':clearTimeout(B.rep);S.repeat=false;save();finishBattleRefresh();break;
     case 'stat':if(S.pts<1)return;{const before=curStats().maxhp;S.pts--;S.stats[v]++;const after=curStats().maxhp;if(S.hp!=null&&after>before)S.hp+=after-before}save();render();break;
     case 'statreset':{if(!ui.resetArm){ui.resetArm=true;render();return}if(S.crystals<10){toast(tt('ผลึกไม่พอ','Not enough crystals'),'bad');ui.resetArm=false;render();return}const st=CLASSES[S.cls].start;let spent=0;for(const k of STATK)spent+=S.stats[k]-st[k];S.stats={...st};S.pts+=spent;S.crystals-=10;ui.resetArm=false;save();render();toast(tt(`คืนแต้ม ${spent} แต้มแล้ว`,`Refunded ${spent} points`),'gold');break}
     case 'learn':{const sk=SKILLS[S.cls].find(s=>s.id===v);if(S.sp<1||S.lv<sk.unlock||S.skills[v]>=5)return;S.sp--;S.skills[v]++;save();render();toast(`${N(sk.name)} Lv${S.skills[v]}`,'gold');break}
     case 'title':S.title=v;save();render();break;
     case 'chest':openChest();break;
-    case 'pull':pull(+v);break;
+    case 'pull':pull(+v,b.dataset.by);break;
     case 'bagf':ui.bagF=v;render();break;
-    case 'dexf':ui.dexF=v;render();break;
-    case 'dex':openDex(v);break;
     case 'item':openItem(id);break;
     case 'equip':{const it=S.inv.find(i=>i.id===id);if(!canWear(it))return;S.eq[it.slot]=id;bump('equip');save();openItem(id);render();break}
     case 'unequip':{const it=S.inv.find(i=>i.id===id);if(it.slot==='weapon'){toast(tt('ต้องมีอาวุธ 1 ชิ้น สวมชิ้นอื่นแทนได้','You need a weapon; equip another instead'),'bad');return}S.eq[it.slot]=null;bump('equip');save();openItem(id);render();break}
-    case 'upgrade':{const it=S.inv.find(i=>i.id===id);const c=upCost(it.up);if(S.crystals<c||it.up>=10)return;S.crystals-=c;bump('up');if(Math.random()<UPR[it.up]){it.up++;toast(tt(`ตีบวกสำเร็จ! +${it.up}`,`Upgrade success! +${it.up}`),'gold')}else if(it.up>=5){it.up--;toast(tt(`ตีไม่ติด ลดเหลือ +${it.up}`,`Failed, dropped to +${it.up}`),'bad')}else toast(tt('ตีไม่ติด เสียผลึก ขั้นไม่ลด','Failed; level kept'),'bad');save();openItem(id);render();break}
-    case 'salvage':{const it=S.inv.find(i=>i.id===id);const g=(it.rar+1)*3+it.up*2+Math.floor(it.lv/2);S.inv=S.inv.filter(i=>i.id!==id);S.crystals+=g;toast(`${ico('crystal',16)} +${g}`,'gold');save();closeOv();break}
+    case 'upgrade':{const it=S.inv.find(i=>i.id===id);const c=upCost(it.up);if(S.crystals<c||it.up>=10)return;S.crystals-=c;bump('up');if(Math.random()<UPR[it.up]){it.up++;sfx('rare');toast(tt(`ตีบวกสำเร็จ! +${it.up}`,`Upgrade success! +${it.up}`),'gold')}else if(it.up>=5){it.up--;sfx('bad');toast(tt(`ตีไม่ติด ลดเหลือ +${it.up}`,`Failed, dropped to +${it.up}`),'bad')}else{sfx('bad');toast(tt('ตีไม่ติด เสียผลึก ขั้นไม่ลด','Failed; level kept'),'bad')}save();openItem(id);render();break}
+    case 'salvage':{const it=S.inv.find(i=>i.id===id);if(!it||Object.values(S.eq).includes(id))return;const g=salvVal(it);S.inv=S.inv.filter(i=>i.id!==id);S.crystals+=g;sfx('coin');toast(`${ico('crystal',16)} +${g}`,'gold');save();closeOv();break}
     case 'smode':ui.stats=v;render();break;
     case 'budget':if(ui.budgetEdit){document.querySelectorAll('[data-budget]').forEach(i=>{const n=parseFloat(i.value);if(n>=0)S.budget[i.dataset.budget]=Math.round(n)});save();toast(tt('บันทึกงบแล้ว','Budget saved'),'gold')}ui.budgetEdit=!ui.budgetEdit;render();break;
     case 'recon':doRecon();break;
@@ -1407,7 +1536,7 @@ document.addEventListener('click',ev=>{
   }
 });
 function applyLoaded(s){S=s;if(S.lang)LANG=S.lang;CARRY=null;save();ui.impArm=false;URLC.clear();closeOv();settle();settleMonth();D();render();toast(tt(`โหลดเซฟของ ${esc(S.name)} แล้ว`,`Loaded ${esc(S.name)}`),'gold')}
-function finishBattleRefresh(){const hs=hpState();const btn=document.querySelector('[data-act="bagain"]');if(btn){btn.textContent=tt(`สู้อีก · พลัง ${B.mon.cost}`,`Fight again · ${B.mon.cost}`);btn.disabled=!(S.energy>=B.mon.cost&&hs.hp>=1)}const st=document.querySelector('[data-act="bstop"]');if(st)st.remove();const pb=document.querySelector('#b-cmd [data-act="potion"]');if(pb&&(S.potions<1||hs.hp>=hs.mx))pb.remove();else if(pb)pb.innerHTML=`${ico('potion',16)} ×${S.potions}`}
+function finishBattleRefresh(){const hs=hpState();const btn=document.querySelector('[data-act="bagain"]');if(btn){const nf=B.tower?towerState().best+1:0,cost=B.tower?towerCost(nf):B.mon.cost;btn.textContent=B.tower?(nf>TOWERTOP?tt('พิชิตยอดหอคอยแล้ว!','Tower conquered!'):tt(`ชั้น ${nf} · พลัง ${cost}`,`F${nf} · ${cost}`)):tt(`สู้อีก · พลัง ${cost}`,`Fight again · ${cost}`);btn.disabled=!((!B.tower||nf<=TOWERTOP)&&S.energy>=cost&&hs.hp>=1)}const st=document.querySelector('[data-act="bstop"]');if(st)st.remove();const pb=document.querySelector('#b-cmd [data-act="potion"]');if(pb&&(S.potions<1||hs.hp>=hs.mx))pb.remove();else if(pb)pb.innerHTML=`${ico('potion',16)} ×${S.potions}`}
 document.addEventListener('input',e=>{const t=e.target;
   if(t.id==='amt')ui.amt=t.value;else if(t.id==='note')ui.note=t.value;else if(t.id==='ritem')ui.rItem=t.value;else if(t.id==='ramt')ui.rAmt=t.value;
   else if(t.id==='crname'){cr.name=t.value;cr.arm=false;const btn=document.querySelector('[data-act="create"]');if(btn){btn.classList.remove('red');btn.textContent=tt('สร้างตัวละคร','Create hero')}}
@@ -1415,8 +1544,33 @@ document.addEventListener('input',e=>{const t=e.target;
   else if(t.id==='nscheck'){const nb=$('#nsbtn');if(nb)nb.disabled=!t.checked}});
 document.addEventListener('change',e=>{const t=e.target;if(t.id==='savefile'&&t.files&&t.files[0]){const f=t.files[0];const r=new FileReader();r.onload=()=>{const s=parseSave(r.result);if(!s){toast(tt('ไฟล์เซฟไม่ถูกต้อง','Not a valid save file'),'bad');return}applyLoaded(s)};r.readAsText(f);t.value='';return}if(t.id==='hcpick'){cr.hc=t.value.toLowerCase();cr.arm=false;render();return}if(t.id==='eyepick'){cr.eye=t.value.toLowerCase();cr.arm=false;render();return}if(t.id==='rcat')ui.rCat=t.value;if(t.id==='duelcat'){ui.duelCat=t.value;render()}if(t.id==='duelamt')render();if(t.id==='nscheck'){const nb=$('#nsbtn');if(nb)nb.disabled=!t.checked}});
 document.addEventListener('keydown',e=>{if(e.key==='Enter'&&(e.target.id==='amt'||e.target.id==='note')){e.preventDefault();addEntry()}if(e.key==='Escape'&&!$('#ov').hidden&&!ui.cq)closeOv()});
+/* ---------- sound: tiny chiptune synth, no audio files ---------- */
+const SND={on:(()=>{try{return localStorage.getItem('ier-sound')!=='0'}catch(e){return true}})(),ctx:null,master:null,last:{}};
+function actx(){if(SND.ctx)return SND.ctx;const C=window.AudioContext||window.webkitAudioContext;if(!C)return null;try{SND.ctx=new C();SND.master=SND.ctx.createGain();SND.master.gain.value=.22;SND.master.connect(SND.ctx.destination)}catch(e){SND.ctx=null}return SND.ctx}
+function tone(f,d,{type='square',v=.5,at=0,to=null}={}){const c=SND.ctx,t=c.currentTime+at,o=c.createOscillator(),g=c.createGain();o.type=type;o.frequency.setValueAtTime(f,t);if(to)o.frequency.exponentialRampToValueAtTime(to,t+d);g.gain.setValueAtTime(v,t);g.gain.exponentialRampToValueAtTime(.001,t+d);o.connect(g);g.connect(SND.master);o.start(t);o.stop(t+d+.02)}
+function noise(d,{v=.5,at=0,f=1800}={}){const c=SND.ctx,t=c.currentTime+at,n=Math.floor(c.sampleRate*d),b=c.createBuffer(1,n,c.sampleRate),a=b.getChannelData(0);for(let i=0;i<n;i++)a[i]=Math.random()*2-1;const s=c.createBufferSource(),fl=c.createBiquadFilter(),g=c.createGain();s.buffer=b;fl.type='lowpass';fl.frequency.value=f;g.gain.setValueAtTime(v,t);g.gain.exponentialRampToValueAtTime(.001,t+d);s.connect(fl);fl.connect(g);g.connect(SND.master);s.start(t);s.stop(t+d+.02)}
+const NOTES=n=>440*Math.pow(2,(n-69)/12);
+const arp=(ns,step,o={})=>ns.forEach((n,i)=>tone(NOTES(n),o.d||step*1.6,{...o,at:(o.at||0)+i*step}));
+const SFX={
+  click:()=>tone(1320,.035,{v:.25}),
+  coin:()=>{tone(NOTES(83),.07,{v:.4});tone(NOTES(88),.22,{v:.4,at:.07})},
+  card:()=>{tone(320,.09,{type:'triangle',v:.5,to:900});tone(NOTES(84),.12,{v:.3,at:.09})},
+  rare:()=>arp([84,88,91,96,100],.07,{v:.35}),
+  hit:()=>{noise(.07,{v:.6,f:2600});tone(180,.08,{v:.35,to:90})},
+  crit:()=>{noise(.12,{v:.8,f:4200});tone(260,.12,{v:.4,to:70});tone(NOTES(96),.08,{v:.25,at:.04})},
+  miss:()=>tone(900,.12,{type:'triangle',v:.25,to:300}),
+  shot:()=>{noise(.05,{v:.4,f:6000});tone(700,.06,{v:.2,to:200})},
+  skill:()=>{tone(260,.22,{type:'sawtooth',v:.25,to:1300});tone(NOTES(91),.1,{v:.2,at:.18})},
+  heal:()=>arp([76,79,84],.06,{type:'triangle',v:.4}),
+  kill:()=>arp([79,74,67],.06,{v:.35}),
+  win:()=>{arp([72,76,79],.09,{v:.35});tone(NOTES(84),.35,{v:.35,at:.27})},
+  lose:()=>{tone(440,.7,{type:'triangle',v:.5,to:80});tone(220,.7,{v:.15,to:55,at:.05})},
+  level:()=>arp([72,76,79,84,88,91],.06,{v:.3}),
+  bad:()=>{tone(196,.09,{v:.35});tone(147,.16,{v:.35,at:.09})},
+};
+function sfx(n,force){if(!SND.on&&!force)return;const c=actx();if(!c)return;if(c.state==='suspended')c.resume().catch(()=>{});const now=performance.now();if(SND.last[n]&&now-SND.last[n]<35)return;SND.last[n]=now;try{SFX[n]&&SFX[n]()}catch(e){}}
 function toast(msg,kind){const el=document.createElement('div');el.className='toast '+(kind||'');el.innerHTML=msg;$('#toasts').appendChild(el);setTimeout(()=>el.classList.add('out'),2600);setTimeout(()=>el.remove(),3000)}
-setInterval(()=>{if(!S||!READY)return;hud();const el=$('#hpinfo');if(el){const hs=hpState();el.innerHTML=`HP <b class="num">${hs.hp}/${hs.mx}</b> · ${hpInfo()}`}},1000);
+setInterval(()=>{if(!S||!READY)return;hud();const el=$('#hpinfo');if(el){const hs=hpState();el.innerHTML=`HP <b class="num">${hs.hp}/${hs.mx}</b> · ${hpInfo()}`}const ei=$('#einfo');if(ei)ei.innerHTML=eInfo()},1000);
 
 hud();
 ATLAS.onload=()=>{READY=true;if(S){settle();settleMonth();D()}render()};

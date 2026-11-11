@@ -1,5 +1,5 @@
 // IER service worker — bump VERSION with each patch (build does it from GAMEVER)
-const VERSION='ier-1.3.2';
+const VERSION='ier-1.4';
 const CORE=['./','./index.html','./manifest.webmanifest','./icon-180.png','./icon-192.png','./icon-512.png'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(VERSION).then(c=>c.addAll(CORE.map(u=>new Request(u,{cache:'reload'})))))});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==VERSION&&k!=='ier-fonts').map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
